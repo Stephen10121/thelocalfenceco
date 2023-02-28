@@ -1,0 +1,10 @@
+{
+  "name": "thelocalfenceco",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Stephen10121/thelocalfenceco.git",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
