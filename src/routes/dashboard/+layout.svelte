@@ -1,4 +1,6 @@
-<header> nice </header>
+<header>
+  <a href="/logout">Logout</a>
+</header>
 <slot />
 
 <style>

@@ -52,6 +52,14 @@
     color: #dfdfdf;
   }
 
+  @keyframes autofill {
+    0%,
+    100% {
+      color: #666;
+      background: transparent;
+    }
+  }
+
   @-webkit-keyframes autofill {
     0%,
     100% {
@@ -64,6 +72,9 @@
     -webkit-animation-delay: 1s; /* Safari support - any positive time runs instantly */
     -webkit-animation-name: autofill;
     -webkit-animation-fill-mode: both;
+    animation-delay: 1s;
+    animation-name: autofill;
+    animation-fill-mode: both;
   }
 
   button {

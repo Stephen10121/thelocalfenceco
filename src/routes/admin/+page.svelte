@@ -3,11 +3,11 @@
 </script>
 
 <svelte:head>
-  <title>Admin Page</title>
+  <title>Dashboard</title>
 </svelte:head>
 
 <section>
-  <h1>Admin Page</h1>
+  <h1>Dashboard</h1>
   <AdminForm />
 </section>
 

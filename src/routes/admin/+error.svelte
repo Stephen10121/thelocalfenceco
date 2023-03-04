@@ -4,7 +4,7 @@
 </script>
 
 <section>
-  <h1>Admin Page</h1>
+  <h1>Dashboard</h1>
   <p>{$page ? ($page.error ? $page.error.message : $page) : $page}</p>
   <AdminForm />
 </section>

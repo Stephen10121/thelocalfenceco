@@ -162,7 +162,7 @@
 
   .section-small-nav {
     width: 100%;
-    background-color: #387e54;
+    background-color: #dfdfdf;
     position: absolute;
     top: 100%;
     left: 0;
@@ -182,7 +182,7 @@
     text-decoration: none;
     width: 100%;
     display: block;
-    background-color: #28583b;
+    background-color: #b4b4b4;
     font-family: "Roboto", sans-serif;
     font-size: 1.15rem;
     padding: 5px;
