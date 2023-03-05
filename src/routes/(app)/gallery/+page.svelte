@@ -2,7 +2,6 @@
   import { onMount } from "svelte";
   //@ts-ignore
   import Image from "svelte-image";
-  import { encodeImageToBlurhash } from "../../../functions/encoder";
 
   const burStuff = {
     fence1: {
