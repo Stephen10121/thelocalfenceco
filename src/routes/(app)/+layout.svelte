@@ -107,7 +107,8 @@
 
 <style>
   #app {
-    height: 100%;
+    height: 100vh;
+    height: 100dvh;
     width: 100%;
     background-color: #f3f3f3;
     position: relative;
