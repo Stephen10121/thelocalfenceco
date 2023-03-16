@@ -7,3 +7,7 @@ trace: {
     threshold: 120,
   },
 ```
+Also replace trace to blur here:
+```javascript
+  placeholder: "blur", // It's "trace" by default
+```
