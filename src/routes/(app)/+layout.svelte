@@ -5,6 +5,10 @@
 
   let showAnnouncement = true;
   let showNav = false;
+
+  function linkClicked() {
+    showNav = false;
+  }
 </script>
 
 <div
@@ -21,7 +25,7 @@
       <section class="fancy">
         <a class="logo" href="/"><h1>Local Fencing Co</h1></a>
         <section class="section-small">
-          <Hamburger on:click={() => (showNav = !showNav)} />
+          <Hamburger active={showNav} on:click={() => (showNav = !showNav)} />
         </section>
         <nav class="section-large">
           <ul>
@@ -73,26 +77,26 @@
     >
       <ul>
         <li
-          ><a href="/" class={$page.url.pathname === "/" ? "selected" : ""}
+          ><a href="/" class={$page.url.pathname === "/" ? "selected" : ""} on:click={linkClicked}
             >Home</a
           ></li
         >
         <li
           ><a
-            href="/about"
+            href="/about" on:click={linkClicked}
             class={$page.url.pathname === "/about" ? "selected" : ""}>About</a
           ></li
         >
         <li
           ><a
-            href="/contact"
+            href="/contact" on:click={linkClicked}
             class={$page.url.pathname === "/contact" ? "selected" : ""}
             >Contact</a
           ></li
         >
         <li
           ><a
-            href="/gallery"
+            href="/gallery" on:click={linkClicked}
             class={$page.url.pathname === "/gallery" ? "selected" : ""}
             >Gallery</a
           ></li

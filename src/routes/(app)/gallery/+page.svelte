@@ -1,237 +1,64 @@
 <script lang="ts">
-  import { onMount } from "svelte";
   //@ts-ignore
   import Image from "svelte-image";
-
-  const burStuff = {
-    fence1: {
-      encoded: "U6F#y}$y1T0wL-xa?uMy0:tS}pWE05S6W@R+",
-      sizes: {
-        width: 1200,
-        height: 600,
-      },
-    },
-    fence3: {
-      encoded: "UGJ7aAZ%R+i{~T=}E0jYp_NHn$oJ64%MVsR%",
-      sizes: { width: 591, height: 442 },
-    },
-    fence4: {
-      encoded: "UIDT31_3NOkB~pW8Rmf9IVRh-oohI:xZ%KWC",
-      sizes: { width: 1920, height: 1080 },
-    },
-    fence5: {
-      encoded: "UEA,:kIUE0xv?]IBRQt8F?ot%1V[H@og%MRi",
-      sizes: { width: 1024, height: 768 },
-    },
-  };
 </script>
 
 <section>
   <!-- <h1>Gallery</h1> -->
   <div class="row">
     <div class="column">
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence1.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence5.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence3.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence4.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence5.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence4.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence3.jpg"
-        alt="Cat"
-        width="100%"
-      />
-    </div>
-    <div class="column">
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence5.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence4.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence3.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence1.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence3.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence4.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence5.jpg"
-        alt="Cat"
-        width="100%"
-      />
-    </div>
-    <div class="column">
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence1.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence5.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence3.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence4.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence5.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence4.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence3.jpg"
-        alt="Cat"
-        width="100%"
-      />
-    </div>
-    <div class="column">
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence5.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence4.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence3.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence1.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence3.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence4.jpg"
-        alt="Cat"
-        width="100%"
-      />
-      <Image
-        blur={true}
-        wrapperClass="columnimg"
-        src="fence5.jpg"
-        alt="Cat"
-        width="100%"
-      />
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fence1.jpg"
+          alt="fence1"
+          width="100%"
+        />
+        <div class="cover">
+          <h1>A Cool Fence</h1>
+          <a href="/contact">Get A Quote</a>
+        </div>
+      </div>
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fence3.jpg"
+          alt="fence3"
+          width="100%"
+        />
+        <div class="cover">
+          <h1>Another Cool Fence</h1>
+          <a href="/contact">Get A Quote</a>
+        </div>
+      </div>
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fence4.jpg"
+          alt="fence4"
+          width="100%"
+        />
+        <div class="cover">
+          <h1>Even Cooler Fence</h1>
+          <a href="/contact">Get A Quote</a>
+        </div>
+      </div>
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fence5.jpg"
+          alt="fence5"
+          width="100%"
+        />
+        <div class="cover">
+          <h1>The Coolest Fence</h1>
+          <a href="/contact">Get A Quote</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -264,6 +91,50 @@
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
+  }
+
+  .image {
+    margin-top: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.466);
+    /* background-color: rgba(0, 0, 0, 0.233); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.15s linear;
+  }
+
+  .cover:hover {
+    opacity: 1;
+  }
+
+  .cover h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    color: #000000;
+  }
+
+  .cover a {
+    background-color: #28583b;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 100vh;
+    font-size: 0.85rem;
   }
 
   /* Responsive layout - makes a two column-layout instead of four columns */

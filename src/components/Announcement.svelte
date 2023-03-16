@@ -16,9 +16,9 @@
     width: 100%;
     height: 30px;
     background-color: #2f6846;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 20px;
     align-items: center;
-    justify-content: space-between;
     padding: 0 10px;
     z-index: 300;
   }
@@ -26,6 +26,10 @@
   p {
     font-family: "Roboto", sans-serif;
     color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
     font-size: 0.75rem;
   }
 
