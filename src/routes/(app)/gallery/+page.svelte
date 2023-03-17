@@ -4,7 +4,7 @@
 </script>
 
 <section>
-  <!-- <h1>Gallery</h1> -->
+  <!-- <h1 class="title">Gallery</h1> -->
   <div class="row">
     <div class="column">
       <div class="image">
@@ -16,8 +16,10 @@
           width="100%"
         />
         <div class="cover">
-          <h1>A Cool Fence</h1>
-          <a href="/contact">Get A Quote</a>
+          <div class="cover2">
+            <h1>A Cool Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
         </div>
       </div>
       <div class="image">
@@ -29,8 +31,10 @@
           width="100%"
         />
         <div class="cover">
-          <h1>Another Cool Fence</h1>
-          <a href="/contact">Get A Quote</a>
+          <div class="cover2">
+            <h1>Another Cool Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
         </div>
       </div>
       <div class="image">
@@ -42,8 +46,10 @@
           width="100%"
         />
         <div class="cover">
-          <h1>Even Cooler Fence</h1>
-          <a href="/contact">Get A Quote</a>
+          <div class="cover2">
+            <h1>Even Cooler Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
         </div>
       </div>
       <div class="image">
@@ -55,8 +61,196 @@
           width="100%"
         />
         <div class="cover">
-          <h1>The Coolest Fence</h1>
-          <a href="/contact">Get A Quote</a>
+          <div class="cover2">
+            <h1>The Coolest Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fence1.jpg"
+          alt="fence1"
+          width="100%"
+        />
+        <div class="cover">
+          <div class="cover2">
+            <h1>A Cool Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fence3.jpg"
+          alt="fence3"
+          width="100%"
+        />
+        <div class="cover">
+          <div class="cover2">
+            <h1>Another Cool Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fence4.jpg"
+          alt="fence4"
+          width="100%"
+        />
+        <div class="cover">
+          <div class="cover2">
+            <h1>Even Cooler Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fence5.jpg"
+          alt="fence5"
+          width="100%"
+        />
+        <div class="cover">
+          <div class="cover2">
+            <h1>The Coolest Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fence1.jpg"
+          alt="fence1"
+          width="100%"
+        />
+        <div class="cover">
+          <div class="cover2">
+            <h1>A Cool Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fence3.jpg"
+          alt="fence3"
+          width="100%"
+        />
+        <div class="cover">
+          <div class="cover2">
+            <h1>Another Cool Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fence4.jpg"
+          alt="fence4"
+          width="100%"
+        />
+        <div class="cover">
+          <div class="cover2">
+            <h1>Even Cooler Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fence5.jpg"
+          alt="fence5"
+          width="100%"
+        />
+        <div class="cover">
+          <div class="cover2">
+            <h1>The Coolest Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fence1.jpg"
+          alt="fence1"
+          width="100%"
+        />
+        <div class="cover">
+          <div class="cover2">
+            <h1>A Cool Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fence3.jpg"
+          alt="fence3"
+          width="100%"
+        />
+        <div class="cover">
+          <div class="cover2">
+            <h1>Another Cool Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fence4.jpg"
+          alt="fence4"
+          width="100%"
+        />
+        <div class="cover">
+          <div class="cover2">
+            <h1>Even Cooler Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fence5.jpg"
+          alt="fence5"
+          width="100%"
+        />
+        <div class="cover">
+          <div class="cover2">
+            <h1>The Coolest Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
         </div>
       </div>
     </div>
@@ -71,18 +265,18 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    overflow-y: auto;
     /* padding-top: 50px; */
   }
+
   .row {
     display: -ms-flexbox; /* IE10 */
     display: flex;
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
-    padding: 0 5px 5px 5px;
+    padding: 50px 5px 5px 5px;
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   /* Create four equal columns that sits next to each other */
@@ -106,19 +300,33 @@
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .cover2 {
+    width: 100%;
+    height: 100%;
     background-color: rgba(255, 255, 255, 0.466);
     /* background-color: rgba(0, 0, 0, 0.233); */
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
     opacity: 0;
-    transition: opacity 0.15s linear;
   }
 
-  .cover:hover {
-    opacity: 1;
+  @keyframes show {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .cover:hover .cover2 {
+    animation: show 0.15s linear forwards;
+    display: flex;
   }
 
   .cover h1 {
@@ -152,6 +360,10 @@
       -ms-flex: 100%;
       flex: 100%;
       max-width: 100%;
+    }
+
+    .row {
+      padding: 0 5px 5px 5px;
     }
   }
 </style>
