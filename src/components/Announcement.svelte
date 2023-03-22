@@ -4,14 +4,21 @@
   const dispatch = createEventDispatcher();
 </script>
 
-<section>
-  <p
-    ><strong>Limited time only:</strong> All quotes are 50% off for the next 3 days.</p
-  >
-  <button on:click={() => dispatch("close")}>&#10006;</button>
-</section>
+<div class="cover">
+  <section>
+    <p
+      ><strong>Limited time only:</strong> All quotes are 50% off for the next 3 days.</p
+    >
+    <button on:click={() => dispatch("close")}>&#10006;</button>
+  </section>
+</div>
 
 <style>
+  .cover {
+    position: relative;
+    width: 100%;
+    height: 30px;
+  }
   section {
     width: 100%;
     height: 30px;
@@ -21,6 +28,9 @@
     align-items: center;
     padding: 0 10px;
     z-index: 300;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   p {
