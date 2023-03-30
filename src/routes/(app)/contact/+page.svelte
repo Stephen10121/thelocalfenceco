@@ -1,108 +1,115 @@
+<script lang="ts">
+    import ContactCard from "../../../components/ContactCard.svelte";
+</script>
 <main>
-    <h1>We Are in <span>Vancouver Washington</span></h1>
-    <section>
-        <div>
-            <img src="/icons/phone.svg" alt="Phone Icon">
-            <h2>Telephone</h2>
+    <section class="section-welcome">
+        <h1>Lets get in touch!</h1>
+        <h2 class="location-h2">We Are in <span>Vancouver Washington</span></h2>
+    </section>
+    <section class="cards">
+        <ContactCard iconSource="/icons/phone.svg" iconAlt="Phone Icon" title="Telephone">
             <a href="tel:3601234567">(360)-123-4567</a>
-        </div>
-        <div>
-            <img src="/icons/map.svg" alt="Map Icon">
-            <h2>Location</h2>
+        </ContactCard>
+        <div class="dividor" />
+        <ContactCard iconSource="/icons/map.svg" iconAlt="Map Icon" title="Location">
             <p>City, State</p>
-        </div>
-        <div>
-            <img src="/icons/clock.svg" alt="Clock Icon">
-            <h2>Hours</h2>
-            <p>Mon-Fri: 9AM-5PM<br>Sat-Sun: Closed</p>
-        </div>
+        </ContactCard>
+        <div class="dividor" />
+        <ContactCard iconSource="/icons/mail.svg" iconAlt="Envelope Icon" title="Email us">
+            <a href="mailto:email@email.com">email@email.com</a>
+        </ContactCard>
     </section>
 </main>
 <style>
     main {
+        height: fit-content;
+        padding: 50px 0 100px 0;
         width: 100%;
-        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         gap: 60px;
-        --gap: 100px;
+        --gap: 10px;
     }
 
     h1 {
         font-family: "Poppins", sans-serif;
-        font-size: clamp(1.25rem, -1.5rem + 8vw, 2rem);
+        font-size: clamp(1.75rem, -1.5rem + 8vw, 2.25rem);
     }
 
-    h1 span {
+    .location-h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: clamp(1rem, -1.5rem + 8vw, 1.5rem);
+    }
+
+    .location-h2 span {
         color: #28583b;
     }
 
-    section {
-        display: flex;
-        flex-direction: column;
-        gap: calc(var(--gap) / 2);
-    }
-
-    div:not(:first-child){
-        border-top: 2px solid black;
-        padding-top: calc(var(--gap) / 2);
-    }
-
-    div {
+    .section-welcome {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        /* background-color: red; */
         gap: 15px;
         height: 70px;
+        margin-top: 10px;
     }
 
-    div img {
-        width: 40px;
-        height: 40px;
-        color: #28583b;
-    }
-
-    div h2 {
+    .section-welcome h2 {
         font-family: "Poppins", sans-serif;
         font-size: 1.2rem;
     }
 
-    div p,
-    div a {
+    .cards {
+        margin-top: 50px;
+        display: flex;
+        gap: var(--gap);
+        flex-direction: column;
+    }
+
+    .dividor {
+        width: 200px;
+        height: 1px;
+        background-color: black;
+    }
+
+    p,
+    a {
         font-family: "Roboto", sans-serif;
         font-size: 1rem;
         color: black;
     }
 
-    @media (min-width: 600px) {
+    @media (min-width: 700px) {
         main {
-            --gap: 100px;
+            --gap: 10px;
         }
-        section {
+
+        .dividor {
+            width: 1px;
+            height: 200px;
+        }
+
+        .cards {
             flex-direction: row;
         }
 
-        div {
-            justify-content: flex-start;
-            height: 150px;
-            padding-top: 30px !important;
-        }
-
-        div:not(:first-child){
-            border-top: none;
-            padding-top: 0;
-            border-left: 2px solid black;
-            padding-left: calc(var(--gap) / 2);
+        .section-welcome {
+            margin-top: 100px;
         }
     }
 
     @media (min-width: 750px) {
         main {
-            --gap: 200px;
+            --gap: 30px;
+        }
+    }
+
+    @media (min-width: 900px) {
+        main {
+            --gap: 60px;
         }
     }
 </style>

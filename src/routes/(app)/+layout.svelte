@@ -17,7 +17,17 @@
   <header>
       <section class="public">
           <section class="fancy">
-              <a class="logo" href="/"><h1>{$page.url.pathname === "/gallery" ? "Gallery" : "Local Fencing Co"}</h1></a>
+            <a class="logo" href="/">
+                <h1>
+                    {$page.url.pathname === "/about" ? 
+                    "About" : 
+                    $page.url.pathname === "/contact" ? 
+                    "Contact" : 
+                    $page.url.pathname === "/gallery" ? 
+                    "Gallery" : 
+                    "Local Fencing Co"}
+                </h1>
+            </a>
               <section class="section-small">
                   <Hamburger active={showNav} on:click={() => (showNav = !showNav)} />
               </section>
