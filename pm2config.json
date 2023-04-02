@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "Local Fence Co.",
+            "script": "npm",
+            "args" : "preview"
+        }
+    ]
+}
