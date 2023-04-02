@@ -3,7 +3,7 @@
   import Image from "svelte-image";
 </script>
 
-<section>
+<main>
   <!-- <h1 class="title">Gallery</h1> -->
   <div class="row">
     <div class="column">
@@ -255,12 +255,11 @@
       </div>
     </div>
   </div>
-</section>
+</main>
 
 <style>
-  section {
+  main {
     width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -273,7 +272,7 @@
     display: flex;
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
-    padding: 50px 5px 5px 5px;
+    padding: 20px 5px 5px 5px;
     width: 100%;
     height: 100%;
     overflow-y: auto;

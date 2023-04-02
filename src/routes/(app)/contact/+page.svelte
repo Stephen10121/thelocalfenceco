@@ -22,8 +22,8 @@
 </main>
 <style>
     main {
-        height: fit-content;
-        padding: 50px 0 100px 0;
+        min-height: 100%;
+        padding: 20px 0;
         width: 100%;
         display: flex;
         align-items: center;
@@ -54,7 +54,6 @@
         flex-direction: column;
         gap: 15px;
         height: 70px;
-        margin-top: 10px;
     }
 
     .section-welcome h2 {
@@ -63,7 +62,6 @@
     }
 
     .cards {
-        margin-top: 50px;
         display: flex;
         gap: var(--gap);
         flex-direction: column;
@@ -94,10 +92,6 @@
 
         .cards {
             flex-direction: row;
-        }
-
-        .section-welcome {
-            margin-top: 100px;
         }
     }
 

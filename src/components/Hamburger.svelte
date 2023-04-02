@@ -30,16 +30,17 @@
 
 <style>
   button {
+    margin-top: 5px;
     border: none;
     background: none;
   }
   span {
     --animation-speed: 0.3s;
-    width: 40px;
+    width: 30px;
     height: 3px;
     display: block;
     background-color: #28583b;
-    margin: 10px auto;
+    margin: 7px auto;
     -webkit-transition: all var(--animation-speed) ease-in-out;
     -o-transition: all var(--animation-speed) ease-in-out;
     transition: all var(--animation-speed) ease-in-out;
@@ -60,16 +61,16 @@
   }
 
   button.is-active .line:nth-child(1) {
-    -webkit-transform: translateY(13px) rotate(45deg);
-    -ms-transform: translateY(13px) rotate(45deg);
-    -o-transform: translateY(13px) rotate(45deg);
-    transform: translateY(13px) rotate(45deg);
+    -webkit-transform: translateY(9px) rotate(45deg);
+    -ms-transform: translateY(9px) rotate(45deg);
+    -o-transform: translateY(9px) rotate(45deg);
+    transform: translateY(9px) rotate(45deg);
   }
 
   button.is-active .line:nth-child(3) {
-    -webkit-transform: translateY(-13px) rotate(-45deg);
-    -ms-transform: translateY(-13px) rotate(-45deg);
-    -o-transform: translateY(-13px) rotate(-45deg);
-    transform: translateY(-13px) rotate(-45deg);
+    -webkit-transform: translateY(-11px) rotate(-45deg);
+    -ms-transform: translateY(-11px) rotate(-45deg);
+    -o-transform: translateY(-11px) rotate(-45deg);
+    transform: translateY(-11px) rotate(-45deg);
   }
 </style>

@@ -18,10 +18,13 @@
     text-decoration: none;
     width: 100%;
     display: block;
-    background-color: #b4b4b4;
+    /* background-color: #b4b4b4; */
+    background-color: #c2c2c2;
+    /* border: 1px solid #3f3f3f; */
+    box-shadow: inset rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     font-family: "Roboto", sans-serif;
     font-size: 1.15rem;
-    padding: 5px;
+    padding: 5px 15px;
     border-radius: 5px;
   }
 

@@ -25,7 +25,7 @@
     if (pathname === '/about') return "About";
     if (pathname === '/contact') return "Contact";
     if (pathname === '/gallery') return "Gallery";
-    return 'Local Fencing Co';
+    return 'Local Fence Co.';
   }
 </script>
 
@@ -62,9 +62,7 @@
   </nav>
 </header>
 <section class="main-section" style="--minus-height: {showAnnouncement ? "100px" : "70px"}">
-  <main>
-    <slot />
-  </main>
+  <slot />
   <Footer />
 </section>
   
@@ -80,21 +78,21 @@
     overflow: auto;
     width: 100%;
     height: calc(100% - var(--minus-height));
-    display: grid;
-    grid-template-rows: auto 200px;
+    /* display: grid;
+    grid-template-rows: auto 200px; */
   }
 
-  main {
+  /* .main-section main {
     height: 100%;
-  }
+  } */
 
   .public {
     height: 70px;
-    background-color: #f3f3f3;
+    background-color: #ffffff;
     width: 100%;
     position: relative;
     z-index: 200;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
   }
 
   .fancy {
@@ -108,18 +106,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0 20px;
     box-shadow: none;
-  }
-
-  h1 {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.25rem;
-    color: #28583b;
   }
 
   .logo {
     text-decoration: none;
+  }
+
+  .logo h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    color: #28583b;
   }
 
   .section-small-nav {
@@ -162,9 +160,9 @@
 
   @media (min-width: 600px) {
     .fancy {
-      width: 80%;
-      left: 10%;
-      top: 35px;
+      width: 90%;
+      left: 5%;
+      top:15px;
       border-radius: 10px;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
