@@ -3,11 +3,12 @@
 	import Announcement from "../../components/Announcement.svelte";
 	import { exampleAnnouncementValues, showExampleAnnouncement } from "../../functions/store";
     import type { ExampleAnnoucement } from "../../functions/types";
+    import { page } from "$app/stores";
 
 	let showAnnouncement = false;
 	const announceStoreUnsubscribe = showExampleAnnouncement.subscribe((value) => showAnnouncement = value);
 
-	let announcementData: ExampleAnnoucement = {strong: "", value: ""}
+	let announcementData: ExampleAnnoucement = {strong: "", value: "", backgroundColor: "#000000", textColor: "#ffffff", show: true}
 	const exampleAnnouncementUnsubscribe = exampleAnnouncementValues.subscribe(value => announcementData = value);
 
 	onDestroy(() => {
@@ -18,11 +19,21 @@
 
 <section style="grid-template-rows: {showAnnouncement ? "30px " : ''}70px auto;">
 	{#if showAnnouncement}
-		<Announcement strong={announcementData.strong} value={announcementData.value} on:close={() => showExampleAnnouncement.set(false)}/>
+		<Announcement backgroundColor={announcementData.backgroundColor} textColor={announcementData.textColor} strong={announcementData.strong} value={announcementData.value} on:close={() => showExampleAnnouncement.set(false)}/>
 	{/if}
 	<header>
-		<a href="/logout">Logout</a>
-		<a href="/dashboard/banner">Banner</a>
+		<div>
+			{#if $page.url.pathname !== "/dashboard"}
+				<a href="/dashboard" class="back" title="Go Back" aria-label="Go Back">
+					<img src="/icons/back.svg" alt="Go Back">
+				</a>
+			{/if}
+		</div>
+		<nav>
+			<a href="/dashboard/banner" class="link">Banner</a>
+			<a href="/dashboard/reviews" class="link">Reviews</a>
+			<a href="/logout" class="logout">Logout</a>
+		</nav>
 	</header>
 	<main>
 		<slot />
@@ -39,11 +50,53 @@
 	header {
 		width: 100%;
 		height: 70px;
-		background-color: red;
+		background-color: #dfdfdf;
+		display: flex;
+		align-items: center;
+		padding: 0 10px;
+		justify-content: space-between;
 	}
 
 	main {
 		width: 100%;
 		height: 100%;
+	}
+
+	nav {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.back {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 45px;
+		height: 45px;
+	}
+
+	.back img {
+		height: 90%;
+	}
+
+	.link {
+		color: #000000;
+		font-family: "Roboto",sans-serif;
+	}
+
+	.logout {
+		width: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #000000;
+		text-decoration: none;
+		font-family: "Roboto",sans-serif;
+		background-color: rgb(138, 138, 138);
+		height: 40px;
+		border-radius: 5px;
+
 	}
 </style>

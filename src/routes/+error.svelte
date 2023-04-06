@@ -1,9 +1,12 @@
-<script>
+<script lang="ts">
   import { page } from "$app/stores";
+  import type { AnnouncementBanner } from "../functions/serverData";
   import Layout from "./(app)/+layout.svelte";
+
+  const announcementDummyData = {show: false} as any as AnnouncementBanner
 </script>
 
-<Layout>
+<Layout data={{announcement: announcementDummyData}}>
   <section>
     <h1>{$page.status} | {$page.error?.message}</h1>
     <a href="/">Go Home</a>

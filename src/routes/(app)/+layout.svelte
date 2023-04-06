@@ -5,8 +5,22 @@
   import Hamburger from "../../components/Hamburger.svelte";
   import LargeNavLink from "../../components/LargeNavLink.svelte";
   import SmallNavLink from "../../components/SmallNavLink.svelte";
+  import { exampleAnnouncementValues } from "../../functions/store";
 
-  let showAnnouncement = true;
+  export let data;
+  console.log(data);
+
+  let showAnnouncement = data.announcement.show;
+
+  if (showAnnouncement) {
+    exampleAnnouncementValues.set({
+      strong: data.announcement.strong,
+      backgroundColor: data.announcement.backgroundColor,
+      textColor: data.announcement.textColor,
+      value: data.announcement.val,
+      show: data.announcement.show
+    });
+  }
   let showNav = false;
 
   function linkClicked() {
@@ -30,7 +44,7 @@
 </script>
 
 {#if showAnnouncement}
-  <Announcement on:close={() => (showAnnouncement = false)} />
+  <Announcement strong={data.announcement.strong} value={data.announcement.val} on:close={() => (showAnnouncement = false)} backgroundColor={data.announcement.backgroundColor} textColor={data.announcement.textColor} />
 {/if}
 <header>
   <section class="public">
