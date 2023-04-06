@@ -1,14 +1,16 @@
 <script lang="ts">
-    export let iconSource: string;
-    export let iconAlt: string;
-    export let title: string;
+    interface IconDescription {
+        iconLink: string;
+        iconDesc: string;
+        name: string;
+    }
 
-    console.log("wow");
+    export let iconDescription: IconDescription;
 </script>
 
 <section>
-    <img src={iconSource} alt={iconAlt} />
-    <h2>{title}</h2>
+    <img src={iconDescription.iconLink} alt={iconDescription.iconDesc} />
+    <h2>{iconDescription.name}</h2>
     <div>
         <slot />
     </div>

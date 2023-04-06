@@ -7,11 +7,13 @@
 
 <style>
   main {
+    width: 100%;
+    height: 100%;
     display: flex;
   }
   section {
     width: 200px;
-    height: calc(100vh - 70px);
+    height: 100%;
     background-color: green;
   }
 </style>

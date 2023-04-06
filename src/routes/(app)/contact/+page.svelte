@@ -7,15 +7,15 @@
         <h2 class="location-h2">We Are in <span>Vancouver Washington</span></h2>
     </section>
     <section class="cards">
-        <ContactCard iconSource="/icons/phone.svg" iconAlt="Phone Icon" title="Telephone">
+        <ContactCard iconDescription={{iconLink:"/icons/phone.svg", iconDesc:"Phone Icon", name:"Telephone"}}>
             <a href="tel:3601234567">(360)-123-4567</a>
         </ContactCard>
         <div class="dividor" />
-        <ContactCard iconSource="/icons/map.svg" iconAlt="Map Icon" title="Location">
+        <ContactCard iconDescription={{iconLink:"/icons/map.svg", iconDesc:"Map Icon", name:"Location"}}>
             <p>City, State</p>
         </ContactCard>
         <div class="dividor" />
-        <ContactCard iconSource="/icons/mail.svg" iconAlt="Envelope Icon" title="Email us">
+        <ContactCard iconDescription={{iconLink:"/icons/mail.svg", iconDesc:"Envelope Icon", name:"Email us"}}>
             <a href="mailto:email@email.com">email@email.com</a>
         </ContactCard>
     </section>

@@ -1,13 +1,14 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
-
+  export let strong = "Limited time only";
+  export let value = "All quotes are 50% off for the next 3 days.";
   const dispatch = createEventDispatcher();
 </script>
 
 <div class="cover">
   <section>
     <p
-      ><strong>Limited time only:</strong> All quotes are 50% off for the next 3 days.</p
+      ><strong>{strong}:</strong> {value}</p
     >
     <button on:click={() => dispatch("close")}>&#10006;</button>
   </section>
