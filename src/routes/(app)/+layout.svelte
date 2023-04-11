@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from "$app/stores";
+    import { onMount } from "svelte";
   import Announcement from "../../components/Announcement.svelte";
   import Footer from "../../components/Footer.svelte";
   import Hamburger from "../../components/Hamburger.svelte";
@@ -41,6 +42,13 @@
     if (pathname === '/gallery') return "Gallery";
     return 'Local Fence Co.';
   }
+
+  let main: HTMLElement;
+  // onMount(() => {
+  //   main.addEventListener("scroll", (event) => {
+  //     console.log(event);
+  //   });
+  // });
 </script>
 
 {#if showAnnouncement}
@@ -75,7 +83,7 @@
     </ul>
   </nav>
 </header>
-<section class="main-section" style="--minus-height: {showAnnouncement ? "100px" : "70px"}">
+<section bind:this={main} class="main-section" style="--minus-height: {showAnnouncement ? "100px" : "70px"}">
   <slot />
   <Footer />
 </section>
