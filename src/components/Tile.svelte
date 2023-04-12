@@ -13,7 +13,7 @@
 
 <IntersectionObserver {element} bind:intersecting>
     <div class="intersector">
-        <div class="actualIntersector" bind:this={element} style="top: {first ? "25" : ""}0px;height: {first ? "1" : "25"}0px;"/>
+        <div class="actualIntersector" bind:this={element} style="top: {first ? "12" : ""}0px;height: {first ? "1" : "25"}0px;"/>
         {#if intersecting}
             <div transition:fade class="tileImage" style={`background-image: url("${backgroundImageLink}");`}>
                 <div class="tile">
