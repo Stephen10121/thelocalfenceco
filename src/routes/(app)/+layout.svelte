@@ -1,19 +1,30 @@
 <script lang="ts">
   import { page } from "$app/stores";
-    import { onMount } from "svelte";
+  import { onDestroy } from "svelte";
   import Announcement from "../../components/Announcement.svelte";
   import Footer from "../../components/Footer.svelte";
   import Hamburger from "../../components/Hamburger.svelte";
   import LargeNavLink from "../../components/LargeNavLink.svelte";
   import SmallNavLink from "../../components/SmallNavLink.svelte";
-  import { exampleAnnouncementValues } from "../../functions/store";
+  import { exampleAnnouncementValues, scrollSomewhere, showAnnouncement } from "../../functions/store";
 
   export let data;
   console.log(data);
 
-  let showAnnouncement = data.announcement.show;
+  let scrollSomewhereValue: null | number = null;
+  const scrollSomewhereUnsubscribe = scrollSomewhere.subscribe((value) => scrollSomewhereValue=value);
 
-  if (showAnnouncement) {
+  $: {
+    if (scrollSomewhereValue && scrollSomewhereValue!==null) {
+      main.scrollTo(0, scrollSomewhereValue);
+    }
+  }
+
+  let showAnnouncement2 = false;
+  const showAnnouncementUnsubscribe = showAnnouncement.subscribe((value) => showAnnouncement2=value);
+  showAnnouncement.set(data.announcement.show);
+
+  if (showAnnouncement2) {
     exampleAnnouncementValues.set({
       strong: data.announcement.strong,
       backgroundColor: data.announcement.backgroundColor,
@@ -49,10 +60,26 @@
   //     console.log(event);
   //   });
   // });
+
+  function doSomething(stuff: any) {
+    console.log({stuff});
+  }
+
+  let paths: {route: string, name: string}[] = [
+    {route: "/", name: "Home"},
+    {route: "/about", name: "About"},
+    {route: "/contact", name: "Contact"},
+    {route: "/gallery", name: "Gallery"}
+  ];
+
+  onDestroy(() => {
+    scrollSomewhereUnsubscribe();
+    showAnnouncementUnsubscribe();
+  });
 </script>
 
-{#if showAnnouncement}
-  <Announcement strong={data.announcement.strong} value={data.announcement.val} on:close={() => (showAnnouncement = false)} backgroundColor={data.announcement.backgroundColor} textColor={data.announcement.textColor} />
+{#if showAnnouncement2}
+  <Announcement strong={data.announcement.strong} value={data.announcement.val} on:close={() => (showAnnouncement.set(false))} backgroundColor={data.announcement.backgroundColor} textColor={data.announcement.textColor} />
 {/if}
 <header>
   <section class="public">
@@ -66,24 +93,22 @@
       <nav class="section-large">
         <ul>
           <div class="selectedPointer" style="transform: translate({calculateTranslate($page.url.pathname)}, 50%)" />
-          <LargeNavLink path="/">Home</LargeNavLink>
-          <LargeNavLink path="/about">About</LargeNavLink>
-          <LargeNavLink path="/contact">Contact</LargeNavLink>
-          <LargeNavLink path="/gallery">Gallery</LargeNavLink>
+          {#each paths as onePath}
+            <LargeNavLink path={onePath.route}>{onePath.name}</LargeNavLink>
+          {/each}
         </ul>
       </nav>
     </section>
   </section>
   <nav class="section-small-nav" style="transform: translateY({showNav ? '0' : '-100%'})">
     <ul>
-      <SmallNavLink path="/" pathname={$page.url.pathname} on:click={linkClicked}>Home</SmallNavLink>
-      <SmallNavLink path="/about" pathname={$page.url.pathname} on:click={linkClicked}>About</SmallNavLink>
-      <SmallNavLink path="/contact" pathname={$page.url.pathname} on:click={linkClicked}>Contact</SmallNavLink>
-      <SmallNavLink path="/gallery" pathname={$page.url.pathname} on:click={linkClicked}>Gallery</SmallNavLink>
+      {#each paths as onePath}
+        <SmallNavLink path={onePath.route} pathname={$page.url.pathname} on:click={linkClicked}>{onePath.name}</SmallNavLink>
+      {/each}
     </ul>
   </nav>
 </header>
-<section bind:this={main} class="main-section" style="--minus-height: {showAnnouncement ? "100px" : "70px"}">
+<section bind:this={main} class="main-section" style="--minus-height: {showAnnouncement2 ? "100px" : "70px"}">
   <slot />
   <Footer />
 </section>
@@ -100,6 +125,7 @@
     overflow: auto;
     width: 100%;
     height: calc(100% - var(--minus-height));
+    scroll-behavior: smooth;
     /* display: grid;
     grid-template-rows: auto 200px; */
   }
