@@ -3,7 +3,7 @@
     const dispatch = createEventDispatcher();
 </script>
 
-<button on:click={() => dispatch("click")}>
+<button aria-hidden="true" on:click={() => dispatch("click")}>
     <span />
     <span />
     <span />

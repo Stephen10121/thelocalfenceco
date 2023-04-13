@@ -2,7 +2,7 @@
   import PopupBox from "../../components/PopupBox.svelte";
   import Section1 from "../../components/mainPage/Section1.svelte";
   import Section2 from "../../components/mainPage/Section2.svelte";
-  let showPopup = true;
+  let showPopup = false;
 </script>
 
 <div class="image">
