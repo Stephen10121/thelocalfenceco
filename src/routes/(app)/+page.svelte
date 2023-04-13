@@ -1,14 +1,42 @@
 <script lang="ts">
+  //@ts-ignore
+  import Image from "svelte-image";
   import PopupBox from "../../components/PopupBox.svelte";
   import Section1 from "../../components/mainPage/Section1.svelte";
   import Section2 from "../../components/mainPage/Section2.svelte";
+    import { onMount } from "svelte";
   let showPopup = false;
+
+  let main: HTMLElement;
+
+  onMount(() => {
+    console.log(main.getBoundingClientRect());
+  });
 </script>
 
 <div class="image">
-  <img src="fence1.jpg" alt="Fence 1" />
+  <picture>
+    <source 
+      type="image/webp"
+      srcset="
+        /g/fence1-400.webp 400w,
+        /g/fence1-800.webp 800w,
+        /g/fence1-1200.webp 1200w"/>
+    <img 
+      loading="lazy"
+      role="presentation"
+      srcset="
+        /g/fence1-400.jpg 400w,
+        /g/fence1-800.jpg 800w,
+        /g/fence1-1200.jpg 1200w
+      "
+      src="fence1.jpg"
+      decoding="async"
+      fetchpriority="high"
+      alt="Fence 1" />
+  </picture>
 </div>
-<main>
+<main bind:this={main}>
   <Section1 />
   <Section2 />
   {#if showPopup}
@@ -46,6 +74,14 @@
     /* background-image: url("/fenc1.jpg"); */
   }
 
+  .image2 {
+    /* min-height: 100%; */
+    /* min-width: 100%; */
+    /* object-fit: cover; */
+    width: 2000px;
+  }
+
+  .image picture,
   .image img {
     min-height: 100%;
     min-width: 100%;
