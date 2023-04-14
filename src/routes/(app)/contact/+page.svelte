@@ -11,12 +11,12 @@
             <a href="tel:3601234567">(360)-123-4567</a>
         </ContactCard>
         <div class="dividor" />
-        <ContactCard iconDescription={{iconLink:"/icons/map.svg", iconDesc:"Map Icon", name:"Location"}}>
-            <p>City, State</p>
-        </ContactCard>
-        <div class="dividor" />
         <ContactCard iconDescription={{iconLink:"/icons/mail.svg", iconDesc:"Envelope Icon", name:"Email us"}}>
             <a href="mailto:email@email.com">email@email.com</a>
+        </ContactCard>
+        <div class="dividor" />
+        <ContactCard iconDescription={{iconLink:"/icons/map.svg", iconDesc:"Map Icon", name:"Location"}}>
+            <p>City, State</p>
         </ContactCard>
     </section>
 </main>

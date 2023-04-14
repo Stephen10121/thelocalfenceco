@@ -42,7 +42,7 @@
         font-family: "Poppins", sans-serif;
         text-transform: uppercase;
         font-weight: 400;
-        font-size: clamp(1.5rem, -1.5rem + 8vw, 2rem);
+        font-size: clamp(1.25rem, -1.5rem + 8vw, 2rem);
     }
 
     p {

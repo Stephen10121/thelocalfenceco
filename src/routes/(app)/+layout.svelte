@@ -42,7 +42,7 @@
   function calculateTranslate(pathname: string) {
     if (pathname === '/') return "-3px";
     if (pathname === '/about') return "49px";
-    if (pathname === '/contact') return "108px";
+    if (pathname === '/contact' || pathname === '/contact/quote') return "108px";
     if (pathname === '/gallery') return "170px";
     return '-3000px';
   }
