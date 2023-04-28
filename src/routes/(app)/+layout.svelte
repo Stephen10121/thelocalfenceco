@@ -51,7 +51,7 @@
     if (pathname === '/about') return "About";
     if (pathname === '/contact') return "Contact";
     if (pathname === '/gallery') return "Gallery";
-    return 'Local Fence Co.';
+    return 'Local Fence Co';
   }
 
   let main: HTMLElement;

@@ -7,6 +7,7 @@
     import { onMount } from "svelte";
     import PictureV2 from "../../components/PictureV2.svelte";
     import FadeImages from "../../components/FadeImages.svelte";
+    import SmallDesc from "../../components/mainPage/SmallDesc.svelte";
   let showPopup = false;
 
   let main: HTMLElement;
@@ -22,7 +23,8 @@
 </div>
 <main bind:this={main}>
   <Section1 />
-  <Section2 />
+  <!-- <Section2 /> -->
+  <SmallDesc />
   {#if showPopup}
     <PopupBox on:close={() => showPopup=false}>
       <section class="disclaimer">

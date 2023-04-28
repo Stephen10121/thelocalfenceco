@@ -1,19 +1,24 @@
 <footer>
     <section class="links">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
-      <a href="/gallery">Gallery</a>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/gallery">Gallery</a>
     </section>
     <section class="info">
         <section class="address">
             <h1>Address</h1>
-            <p>12453 Jeff st, Suite 100<br>Portland, Wa 59642<br>Email: <span><a href="mailto:mail@mail.com">mail@mail.com</a></span></p>
+            <p>6107 NE Erin Way<br>Vancouver WA 98686</p>
         </section>
         <section class="address">
             <h1>Contact</h1>
-            <p>Phone: <span><a href="tel:1231231234">(123)-123-1234</a></span><br>Phone2: <span><a href="tel:1231231234">(123)-123-1234</a></span><br>Phone3: <span><a href="tel:1231231234">(123)-123-1234</a></span></p>
+            <p>Phone: <span>
+                <a href="tel:3607843128">(360)-784-3128</a>
+            </span><br>Email: <span><a href="mailto:thelocalfenceco@gmail.com">thelocalfenceco@gmail.com</a></span></p>
         </section>
+    </section>
+    <section class="licence">
+        <p>WA LIC #LOCALFC775JP</p>
     </section>
   </footer>
 
@@ -36,6 +41,20 @@
         justify-content: space-evenly;
         border-bottom: 1px solid #ffffff;
         padding: 10px 0;
+    }
+
+    .licence {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .licence p {
+        font-family: "Poppins", sans-serif;
+        color: #f3f3f3;
+        font-size: 0.75rem;
     }
 
     .links a {

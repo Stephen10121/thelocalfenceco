@@ -63,16 +63,16 @@
 }
 
 #pic1i {
-  background-image: url('/fence1.jpg');
+  background-image: url('/fences/whitepretty.jpg');
 }
 #pic2i {
-  background-image: url('/fence3.jpg');
+  background-image: url('/fences/wooden5.jpg');
 }
 #pic3i {
-  background-image: url('/fence4.jpg');
+  background-image: url('/fences/wooden4.jpg');
 }
 #pic4i {
-  background-image: url('/fence5.jpg');
+  background-image: url('/fences/wooden3.jpg');
 }
 @-webkit-keyframes fade {
   0% {

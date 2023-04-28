@@ -1,10 +1,27 @@
 <script lang="ts">
-    import FadeImages from "../../../../components/FadeImages.svelte";
+    import { superForm } from "sveltekit-superforms/client";
+    import SuperDebug from "sveltekit-superforms/client/SuperDebug.svelte";
+    import { newSchema } from "../../../../functions/quotePageSchema.js";
+    import SuperInput from "../../../../components/SuperInput.svelte";
 
+    export let data;
+    const { form, errors, enhance } = superForm(data.form, {
+        taintedMessage: "Are you sure you want to leave?",
+        validators: newSchema
+    });
+
+    $: {
+        console.log(data);
+    }
 </script>
+<SuperDebug data={$form} />
 <main>
-    <h1>get a quote</h1>
-    <FadeImages />
+    <form method="POST" use:enhance>
+        <SuperInput placeholder="Name" name="name" id="name" errorMsg={$errors.name} bind:value={$form.name}/>
+        <SuperInput placeholder="Username" name="username" id="username" errorMsg={$errors.username} bind:value={$form.username} />
+        <SuperInput placeholder="Password" name="password" type="password" id="password" errorMsg={$errors.password} bind:value={$form.password} />
+        <button>Send</button>
+    </form>
 </main>
 <style>
     main {
@@ -19,8 +36,9 @@
         --gap: 10px;
     }
 
-    h1 {
-        font-family: "Poppins", sans-serif;
-        font-size: clamp(1.75rem, -1.5rem + 8vw, 2.25rem);
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 </style>
