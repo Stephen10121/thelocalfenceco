@@ -1,11 +1,11 @@
 <script lang="ts">
     import { onDestroy } from "svelte";
-    import { scrollSomewhere, showAnnouncement } from "../../functions/store";
+    import { exampleAnnouncementValues, scrollSomewhere } from "../../functions/store";
     import ScrollDownButton from "../ScrollDownButton.svelte";
 
     let box: HTMLElement;
     let announcementShowing = false;
-    const showAnnouncementUnsubscribe =showAnnouncement.subscribe((value) => announcementShowing=value);
+    const showAnnouncementUnsubscribe = exampleAnnouncementValues.subscribe((value) => announcementShowing=value.show);
 
     onDestroy(() => {
         showAnnouncementUnsubscribe();

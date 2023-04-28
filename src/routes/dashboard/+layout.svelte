@@ -2,13 +2,13 @@
 	import { onDestroy } from "svelte";
 	import Announcement from "../../components/Announcement.svelte";
 	import { exampleAnnouncementValues, showExampleAnnouncement } from "../../functions/store";
-    import type { ExampleAnnoucement } from "../../functions/types";
     import { page } from "$app/stores";
+    import type { AnnouncementBanner } from "../../functions/serverData";
 
 	let showAnnouncement = false;
 	const announceStoreUnsubscribe = showExampleAnnouncement.subscribe((value) => showAnnouncement = value);
 
-	let announcementData: ExampleAnnoucement = {strong: "", value: "", backgroundColor: "#000000", textColor: "#ffffff", show: true}
+	let announcementData: AnnouncementBanner = {strong: "", val: "", backgroundColor: "#000000", textColor: "#ffffff", show: true}
 	const exampleAnnouncementUnsubscribe = exampleAnnouncementValues.subscribe(value => announcementData = value);
 
 	onDestroy(() => {
@@ -19,7 +19,7 @@
 
 <section style="grid-template-rows: {showAnnouncement ? "30px " : ''}70px auto;">
 	{#if showAnnouncement}
-		<Announcement backgroundColor={announcementData.backgroundColor} textColor={announcementData.textColor} strong={announcementData.strong} value={announcementData.value} on:close={() => showExampleAnnouncement.set(false)}/>
+		<Announcement backgroundColor={announcementData.backgroundColor} textColor={announcementData.textColor} strong={announcementData.strong} value={announcementData.val} on:close={() => showExampleAnnouncement.set(false)}/>
 	{/if}
 	<header>
 		<div>

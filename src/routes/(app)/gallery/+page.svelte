@@ -174,26 +174,25 @@
     margin-bottom: 100%;
   } */
 
-  .cover {
+  /* .cover {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  }
+  } */
 
-  .cover2 {
+  /* .cover2 {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.466);
-    /* background-color: rgba(0, 0, 0, 0.233); */
     display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
     opacity: 0;
-  }
+  } */
 
   @keyframes show {
     0% {
@@ -204,18 +203,18 @@
     }
   }
 
-  .cover:hover .cover2 {
+  /* .cover:hover .cover2 {
     animation: show 0.15s linear forwards;
     display: flex;
-  }
+  } */
 
-  .cover h1 {
+  /* .cover h1 {
     font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
     color: #000000;
-  }
+  } */
 
-  .cover a {
+  /* .cover a {
     background-color: #28583b;
     font-family: "Roboto", sans-serif;
     color: white;
@@ -223,7 +222,7 @@
     padding: 7px;
     border-radius: 100vh;
     font-size: 0.85rem;
-  }
+  } */
 
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {

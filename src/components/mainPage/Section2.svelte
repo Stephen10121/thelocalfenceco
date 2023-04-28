@@ -1,10 +1,10 @@
 <script lang="ts">
     import Tile from "../Tile.svelte";
     import { onDestroy } from "svelte";
-    import { showAnnouncement } from "../../functions/store";
+    import { exampleAnnouncementValues, showAnnouncement } from "../../functions/store";
 
     let announcementShowing = false;
-    const showAnnouncementUnsubscribe = showAnnouncement.subscribe((value) => announcementShowing=value);
+    const showAnnouncementUnsubscribe = exampleAnnouncementValues.subscribe((value) => announcementShowing=value.show);
 
     onDestroy(() => {
         showAnnouncementUnsubscribe();

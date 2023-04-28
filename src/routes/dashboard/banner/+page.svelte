@@ -1,15 +1,16 @@
 <script lang="ts">
     import { onDestroy } from "svelte";
     import { exampleAnnouncementValues, showExampleAnnouncement } from "../../../functions/store";
-    import type { ExampleAnnoucement } from "../../../functions/types";
     import Switch from "../../../components/Switch.svelte";
+    import type { AnnouncementBanner } from "../../../functions/serverData";
 
     export let data;
     console.log(data.announcement);
+    exampleAnnouncementValues.set(data.announcement.announcementBanner);
     let showAnnouncement = false;
     const announceStoreUnsubscribe = showExampleAnnouncement.subscribe((value) => showAnnouncement = value);
 
-    let exampleAnnouncementValue: ExampleAnnoucement = {strong: "", value: "", backgroundColor: "#2f6846", textColor: "#ffffff", show: true}
+    let exampleAnnouncementValue: AnnouncementBanner = {strong: "", val: "", backgroundColor: "#2f6846", textColor: "#ffffff", show: true}
     exampleAnnouncementValues.subscribe(value => exampleAnnouncementValue = value);
 
     showExampleAnnouncement.set(true);
@@ -42,7 +43,7 @@
     
         <div class="sep">
             <label for="val">Not Bold Part</label>
-            <input type="text" name="val" id="val" placeholder="Not Bold Part" bind:value={exampleAnnouncementValue.value}/>
+            <input type="text" name="val" id="val" placeholder="Not Bold Part" bind:value={exampleAnnouncementValue.val}/>
         </div>
 
         <div class="sep">

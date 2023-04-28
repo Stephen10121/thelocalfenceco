@@ -9,7 +9,6 @@
   import { exampleAnnouncementValues, scrollSomewhere, showAnnouncement } from "../../functions/store";
 
   export let data;
-  console.log(data);
 
   let scrollSomewhereValue: null | number = null;
   const scrollSomewhereUnsubscribe = scrollSomewhere.subscribe((value) => scrollSomewhereValue=value);
@@ -21,18 +20,10 @@
   }
 
   let showAnnouncement2 = false;
-  const showAnnouncementUnsubscribe = showAnnouncement.subscribe((value) => showAnnouncement2=value);
-  showAnnouncement.set(data.announcement.show);
+  exampleAnnouncementValues.set(data.announcement);
+  const exampleAnnouncementValuesUnsubscribe = exampleAnnouncementValues.subscribe(value => showAnnouncement2 = value.show);
 
-  if (showAnnouncement2) {
-    exampleAnnouncementValues.set({
-      strong: data.announcement.strong,
-      backgroundColor: data.announcement.backgroundColor,
-      textColor: data.announcement.textColor,
-      value: data.announcement.val,
-      show: data.announcement.show
-    });
-  }
+
   let showNav = false;
 
   function linkClicked() {
@@ -74,12 +65,12 @@
 
   onDestroy(() => {
     scrollSomewhereUnsubscribe();
-    showAnnouncementUnsubscribe();
+    exampleAnnouncementValuesUnsubscribe();
   });
 </script>
 
 {#if showAnnouncement2}
-  <Announcement strong={data.announcement.strong} value={data.announcement.val} on:close={() => (showAnnouncement.set(false))} backgroundColor={data.announcement.backgroundColor} textColor={data.announcement.textColor} />
+  <Announcement strong={data.announcement.strong} value={data.announcement.val} on:close={() => (exampleAnnouncementValues.update((value) => {return{...value, show: false}}))} backgroundColor={data.announcement.backgroundColor} textColor={data.announcement.textColor} />
 {/if}
 <header>
   <section class="public">

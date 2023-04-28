@@ -8,7 +8,7 @@ export type AnnouncementBanner = {
 
 
 export let announcementBanner: AnnouncementBanner = {
-    show: true,
+    show: false,
     backgroundColor: "#2f6846",
     textColor: "#ffffff",
     strong: "Limited time only",
