@@ -6,7 +6,7 @@
 	import Hamburger from "../../components/Hamburger.svelte";
 	import Footer from "../../components/Footer.svelte";
 	import { page } from "$app/stores";
-	import { onDestroy } from "svelte";
+	import { onDestroy, onMount } from "svelte";
 
 	export let data;
 
@@ -45,6 +45,15 @@
 	{route: "/contact", name: "Contact"},
 	{route: "/gallery", name: "Gallery"}
 	];
+
+	const scrollToTop = () => main.scrollTo(0, 0);
+
+	onMount(scrollToTop);
+
+	$: {
+		console.log($page.url.pathname);
+		if (main) scrollToTop();
+	}
 
 	onDestroy(() => {
 	scrollSomewhereUnsubscribe();
