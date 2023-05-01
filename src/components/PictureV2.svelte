@@ -4,21 +4,16 @@
     export let styles = "";
     export let className = "";
     export let heightTaller = false;
+    export let first = false;
 </script>
 
-    <img
-    class={className} style="{heightTaller ? "min-width: 100%;max-height: 100%" : "max-width:100%;min-height: 100%;"}{styles}"
-      loading="lazy"
-      role="presentation"
-      src={url}
-      decoding="async"
-      fetchpriority="high"
-      {alt} />
-
-<style>
-    img {
-        /* max-height: 100%;
-        min-width: 100%; */
-        object-fit: cover;
-    }
-</style>
+<img
+    class={className}
+    style="object-fit:cover;{heightTaller?"min-width:100%;max-height:100%":"max-width:100%;min-height:100%;"}{styles}"
+    loading={first ? "eager" : "lazy"}
+    role="presentation"
+    src={url}
+    decoding="async"
+    fetchpriority="high"
+    {alt}
+/>

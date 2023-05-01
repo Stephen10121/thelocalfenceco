@@ -10,7 +10,7 @@
 	<div class='pic' id='pic4'><PictureV2 alt="Wooden Fence" url={wooden3Fence} /></div>
 	<div class='pic' id='pic3'><PictureV2 alt="Wooden Fence" url={wooden4Fence} /></div>
 	<div class='pic' id='pic2'><PictureV2 alt="Wooden Fence" url={wooden5Fence} /></div>
-	<div class='pic' id='pic1'><PictureV2 heightTaller={true} alt="White Vinyl Fence" url={whitePrettyPicture} /></div>
+	<div class='pic' id='pic1'><PictureV2 first={true} heightTaller={true} alt="White Vinyl Fence" url={whitePrettyPicture} /></div>
 </div>
 
 <style>
