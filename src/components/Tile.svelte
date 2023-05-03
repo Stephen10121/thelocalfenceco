@@ -18,7 +18,7 @@
             <div transition:fade class="tileImage" style={`background-image: url("${backgroundImageLink}");`}>
                 <div class="tile">
                     <h1>{title}</h1>
-                    <button>{buttonCallToAction}</button>
+                    <a href="/contact/quote?fenceType=white+vinyl">{buttonCallToAction}</a>
                 </div>
             </div>
         {/if}
@@ -73,20 +73,21 @@
         color: #dfdfdf;
     }
 
-    button {
+    a {
         border: 1px solid #dfdfdf;
         color: #dfdfdf;
         background: none;
-        padding: 5px;
+        padding: 10px;
         font-family: "Poppins", sans-serif;
         font-size: 1rem;
         font-weight: 100;
         text-transform: uppercase;
+        text-decoration: none;
         cursor: pointer;
         transition: background-color 0.15s linear, color 0.15s linear;
     }
 
-    button:hover {
+    a:hover {
         background-color: #dfdfdf;
         color: #000000;
     }

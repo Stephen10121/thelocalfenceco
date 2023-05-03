@@ -4,16 +4,17 @@ import { newSchema } from "../../../../functions/quotePageSchema";
 
 export async function load(event) {
     const form = await superValidate(event, newSchema);
-
+    const params = event.url.searchParams.get("fenceType") || "none";
+    
     return {
-        form
+        form,
+        fenceClicked: params
     }
 }
 
 export const actions = {
     default: async (event) => {
         const form = await superValidate(event, newSchema);
-        console.log(form);
 
         if (!form.valid) {
             return fail(400, {form});

@@ -5,21 +5,32 @@
     import SuperInput from "../../../../components/SuperInput.svelte";
 
     export let data;
+    let fenceClickParamInput: HTMLInputElement;
+
     const { form, errors, enhance } = superForm(data.form, {
         taintedMessage: "Are you sure you want to leave?",
-        validators: newSchema
+        validators: newSchema,
+        onSubmit(event) {
+            $form.fenceClicked = data.fenceClicked;
+            console.log({submitEvent: event});
+        },
+        onResult(event) {
+            console.log({resultEvent: event});
+        },
     });
-
+    $form.fenceClicked = data.fenceClicked;
     $: {
         console.log(data);
     }
+
 </script>
 <SuperDebug data={$form} />
 <main>
     <form method="POST" use:enhance>
         <SuperInput placeholder="Name" name="name" id="name" errorMsg={$errors.name} bind:value={$form.name}/>
-        <SuperInput placeholder="Username" name="username" id="username" errorMsg={$errors.username} bind:value={$form.username} />
-        <SuperInput placeholder="Password" name="password" type="password" id="password" errorMsg={$errors.password} bind:value={$form.password} />
+        <SuperInput placeholder="Email" name="email" id="email" type="email" errorMsg={$errors.contactMethod} bind:value={$form.contactMethod} />
+        <SuperInput placeholder="About" name="about" id="about" errorMsg={$errors.aboutContact} bind:value={$form.aboutContact} />
+        <input type="hidden" bind:this={fenceClickParamInput} name="fenceTypeClicked" bind:value={$form.fenceClicked} />
         <button>Send</button>
     </form>
 </main>
