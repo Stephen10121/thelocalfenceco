@@ -8,7 +8,7 @@
     <section class="info">
         <section class="address">
             <h1>Address</h1>
-            <p>6107 NE Erin Way<br>Vancouver WA 98686</p>
+            <p>6107 NE Erin Way<br>Vancouver, WA 98686</p>
         </section>
         <section class="address">
             <h1>Contact</h1>
@@ -18,7 +18,7 @@
         </section>
     </section>
     <section class="licence">
-        <p>WA LIC #LOCALFC775JP</p>
+        <p>WA LIC# LOCALFC775JP</p>
     </section>
   </footer>
 

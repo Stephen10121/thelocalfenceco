@@ -11,75 +11,13 @@
         <Image
           blur={true}
           wrapperClass="columnimg"
-          src="fences/metal2.jpg"
-          alt="Chicken Fence"
-          width="100%"
-        />
-        <!-- <div class="cover">
-          <div class="cover2">
-            <h1>Another Cool Fence</h1>
-            <a href="/contact">Get A Quote</a>
-          </div>
-        </div> -->
-      </div>
-      <div class="image bottom">
-        <Image
-          blur={true}
-          wrapperClass="columnimg"
-          src="fences/whitepretty.jpg"
-          alt="White Vinyl Fence"
-          width="100%"
-        />
-      <!-- <div class="cover">
-        <div class="cover2">
-          <h1>A Cool Fence</h1>
-          <a href="/contact">Get A Quote</a>
-        </div>
-      </div> -->
-    </div>
-      <div class="image">
-        <Image
-          blur={true}
-          wrapperClass="columnimg"
-          src="fences/wooden1.jpg"
-          alt="Wooden Fence"
-          width="100%"
-        />
-        <!-- <div class="cover">
-          <div class="cover2">
-            <h1>Even Cooler Fence</h1>
-            <a href="/contact">Get A Quote</a>
-          </div>
-        </div> -->
-      </div>
-      <div class="image">
-        <Image
-          blur={true}
-          wrapperClass="columnimg"
-          src="fences/wooden2.jpg"
+          src="fences/wooden5.jpg"
           alt="Wooden Fence"
           width="100%"
         />
         <!-- <div class="cover">
           <div class="cover2">
             <h1>The Coolest Fence</h1>
-            <a href="/contact">Get A Quote</a>
-          </div>
-        </div> -->
-      </div>
-    </div>
-    <div class="column">
-      <div class="image">
-        <Image
-          blur={true}
-          wrapperClass="columnimg"
-          src="fences/metalgate.jpg"
-          alt="Chicken fence with metal gate"
-          width="100%"
-        />
-        <!-- <div class="cover">
-          <div class="cover2">
-            <h1>A Cool Fence</h1>
             <a href="/contact">Get A Quote</a>
           </div>
         </div> -->
@@ -118,13 +56,74 @@
         <Image
           blur={true}
           wrapperClass="columnimg"
-          src="fences/wooden5.jpg"
+          src="fences/whitepretty.jpg"
+          alt="White Vinyl Fence"
+        />
+      <!-- <div class="cover">
+        <div class="cover2">
+          <h1>A Cool Fence</h1>
+          <a href="/contact">Get A Quote</a>
+        </div>
+      </div> -->
+    </div>
+    </div>
+    <div class="column">
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fences/wooden1.jpg"
           alt="Wooden Fence"
           width="100%"
         />
         <!-- <div class="cover">
           <div class="cover2">
             <h1>The Coolest Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
+        </div> -->
+      </div>
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fences/wooden2.jpg"
+          alt="Wooden Fence"
+          width="100%"
+        />
+        <!-- <div class="cover">
+          <div class="cover2">
+            <h1>The Coolest Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
+        </div> -->
+      </div>
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fences/wooden6.jpg"
+          alt="Chicken fence with metal gate"
+          width="100%"
+        />
+        <!-- <div class="cover">
+          <div class="cover2">
+            <h1>A Cool Fence</h1>
+            <a href="/contact">Get A Quote</a>
+          </div>
+        </div> -->
+      </div>
+      <div class="image">
+        <Image
+          blur={true}
+          wrapperClass="columnimg"
+          src="fences/wooden7.jpg"
+          alt="Chicken fence with metal gate"
+          width="100%"
+        />
+        <!-- <div class="cover">
+          <div class="cover2">
+            <h1>A Cool Fence</h1>
             <a href="/contact">Get A Quote</a>
           </div>
         </div> -->
@@ -168,11 +167,6 @@
     overflow: hidden;
     position: relative;
   }
-
-  /* .image.bottom {
-    margin-top: 8px;
-    margin-bottom: 100%;
-  } */
 
   /* .cover {
     position: absolute;
