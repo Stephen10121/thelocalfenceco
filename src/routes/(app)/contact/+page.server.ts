@@ -14,13 +14,17 @@ export async function load(event) {
 }
 
 async function sendForm(data: string) {
-    let transporter = nodeMailer.createTransport({
+    const config = {
         service: "gmail",
         auth: {
             user: import.meta.env.VITE_USER_EMAIL,
             pass: import.meta.env.VITE_USER_PASS
         }
-    });
+    }
+
+    console.log(config);
+
+    let transporter = nodeMailer.createTransport(config);
 
     let info;
     try {
