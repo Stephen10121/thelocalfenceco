@@ -51,8 +51,7 @@
 	onMount(scrollToTop);
 
 	$: {
-		console.log($page.url.pathname);
-		if (main) scrollToTop();
+		if ($page.url.pathname && main) scrollToTop();
 	}
 
 	onDestroy(() => {
