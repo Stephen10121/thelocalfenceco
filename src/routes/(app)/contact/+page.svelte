@@ -2,6 +2,7 @@
     import { superForm } from "sveltekit-superforms/client";
     import { newSchema } from "../../../functions/quotePageSchema.js";
     import SuperInput from "../../../components/SuperInput.svelte";
+    import { ConfettiExplosion } from 'svelte-confetti-explosion';
 
     export let data;
     let submitted = false;
@@ -19,16 +20,23 @@
 </script>
 
 <main>
-    {#if submitted}
-        <h1>Form Submitted.</h1>
-    {/if}
-    <form method="POST" use:enhance>
-        <SuperInput placeholder="Name" name="name" id="name" errorMsg={$errors.name} bind:value={$form.name}/>
-        <SuperInput placeholder="Email" name="contactMethod" id="contactMethod" type="email" errorMsg={$errors.contactMethod} bind:value={$form.contactMethod} />
-        <SuperInput placeholder="About" name="aboutContact" id="aboutContact" errorMsg={$errors.aboutContact} bind:value={$form.aboutContact} />
-        <input type="hidden" bind:this={fenceClickParamInput} name="fenceClicked" bind:value={$form.fenceClicked} />
-        <button>Send</button>
-    </form>
+    <section class="section-welcome">
+        <h1>Lets get in touch!</h1>
+        <h2 class="location-h2">We Are in <span>Vancouver, Washington</span></h2>
+    </section>
+    <section class="form">
+            {#if submitted}
+                <h1>Form Submitted.</h1>
+                <ConfettiExplosion />
+            {/if}
+        <form method="POST" use:enhance>
+            <SuperInput placeholder="Name" name="name" id="name" errorMsg={$errors.name} bind:value={$form.name}/>
+            <SuperInput placeholder="Email" name="contactMethod" id="contactMethod" type="email" errorMsg={$errors.contactMethod} bind:value={$form.contactMethod} />
+            <SuperInput placeholder="Description" name="aboutContact" id="aboutContact" errorMsg={$errors.aboutContact} bind:value={$form.aboutContact} />
+            <input type="hidden" bind:this={fenceClickParamInput} name="fenceClicked" bind:value={$form.fenceClicked} />
+            <button>Send</button>
+        </form>
+    </section>
 </main>
 
 <style>
@@ -43,10 +51,68 @@
         gap: 60px;
         --gap: 10px;
     }
+    h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: clamp(1.75rem, -1.5rem + 8vw, 2.25rem);
+    }
+
+    .location-h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: clamp(1rem, -1.5rem + 8vw, 1.5rem);
+    }
+
+    .location-h2 span {
+        color: #28583b;
+    }
+
+    .section-welcome {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        height: 70px;
+    }
+
+    .section-welcome h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+    }
+
+    .form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .form h1 {
+        color: #28583b;
+    }
 
     form {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        width: 100%;
+        padding: 10px;
+        /* background-color: red; */
+    }
+
+    button {
+        width: 100%;
+        height: 40px;
+        border-radius: 7px;
+        border: none;
+        padding: 0 10px;
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        background-color: #dfdfdf;
+        cursor: pointer;
+        font-weight: bold;
+        color: #28583b;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 </style>

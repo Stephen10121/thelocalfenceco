@@ -8,6 +8,7 @@ specifiers:
   nodemailer: ^6.9.1
   svelte: ^3.54.0
   svelte-check: ^3.0.1
+  svelte-confetti-explosion: ^0.4.0
   svelte-image: ^0.2.9
   svelte-intersection-observer: ^0.10.0
   sveltekit-superforms: ^0.6.18
@@ -18,6 +19,7 @@ specifiers:
 
 dependencies:
   nodemailer: 6.9.1
+  svelte-confetti-explosion: 0.4.0
 
 devDependencies:
   '@sveltejs/adapter-auto': 2.0.1_@sveltejs+kit@1.16.2
@@ -2382,6 +2384,11 @@ packages:
       - stylus
       - sugarss
     dev: true
+
+  /svelte-confetti-explosion/0.4.0:
+    resolution: {integrity: sha512-EifYXjcNzcfrQ4gFLsjxEe5j5aGBZNnEJm+qA025LuZp7bD4YbCLNExNYvvenre3UnwVWGv3E8cTzjO1W01Ckw==}
+    deprecated: This package has been renamed to @neoconfetti/svelte
+    dev: false
 
   /svelte-hmr/0.15.1_svelte@3.59.1:
     resolution: {integrity: sha512-BiKB4RZ8YSwRKCNVdNxK/GfY+r4Kjgp9jCLEy0DuqAKfmQtpL38cQK3afdpjw4sqSs4PLi3jIPJIFp259NkZtA==}

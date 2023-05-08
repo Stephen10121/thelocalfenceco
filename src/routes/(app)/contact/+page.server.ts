@@ -15,14 +15,10 @@ export async function load(event) {
 
 async function sendForm(data: string) {
     let transporter = nodeMailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 465,
-        secure: true,
+        service: "gmail",
         auth: {
-            type: "OAuth2",
-            user: "stephengrzn@gmail.com",
-            accessToken: import.meta.env.VITE_EMAIL_ACCESS_TOKEN,
-            refreshToken: import.meta.env.VITE_EMAIL_REFRESH_TOKEN
+            user: import.meta.env.VITE_USER_EMAIL,
+            pass: import.meta.env.VITE_USER_PASS
         }
     });
 
@@ -39,7 +35,7 @@ async function sendForm(data: string) {
         return false;
     }
 
-    console.log(`Message sent: ${info.messageId}`);
+    console.log(`Message sent: ${info.messageId}. URL: ${nodeMailer.getTestMessageUrl(info)}`);
 }
 
 export const actions = {
