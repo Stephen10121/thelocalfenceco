@@ -16,6 +16,7 @@ export async function load(event) {
 async function sendForm(data: string) {
     const config = {
         service: "gmail",
+        port: 465,
         auth: {
             user: import.meta.env.VITE_USER_EMAIL,
             pass: import.meta.env.VITE_USER_PASS
