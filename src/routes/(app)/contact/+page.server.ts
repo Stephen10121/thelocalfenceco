@@ -13,32 +13,53 @@ export async function load(event) {
     }
 }
 
-async function sendForm(data: string) {
-    let transporter = nodeMailer.createTransport({
-        service: "gmail",
-        auth: {
-            type: "OAUTH2",
-            user: import.meta.env.VITE_USER_EMAIL,
-            clientId: import.meta.env.VITE_CLIENT_ID,
-            clientSecret: import.meta.env.VITE_CLIENT_SECRET,
-            refreshToken: import.meta.env.VITE_REFRESH_TOKEN
-        }
-    });
-
-    let info;
+async function sendForm(name: string, from: string, about: string) {
     try {
-        info = await transporter.sendMail({
-            from: "Local Fence Co Email <test@thelocalfenceco.com>",
-            to: "lbrandon10121@gmail.com",
-            subject: "Testing fence.",
-            html: data
+        const data = await fetch("https://mail.gruzservices.com/sendMail", {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: "POST",
+            body: JSON.stringify({
+                "name": name,
+                "from": from,
+                "about": about,
+                "password": import.meta.env.VITE_PASSWORD
+            })
         });
+        const dataJson = await data.json();
+        console.log(dataJson);
+        return true;
     } catch (err) {
         console.log(err);
         return false;
     }
+    // let transporter = nodeMailer.createTransport({
+    //     service: "gmail",
+    //     auth: {
+    //         type: "OAUTH2",
+    //         user: import.meta.env.VITE_USER_EMAIL,
+    //         clientId: import.meta.env.VITE_CLIENT_ID,
+    //         clientSecret: import.meta.env.VITE_CLIENT_SECRET,
+    //         refreshToken: import.meta.env.VITE_REFRESH_TOKEN
+    //     }
+    // });
 
-    console.log(`Message sent: ${info.messageId}. URL: ${nodeMailer.getTestMessageUrl(info)}`);
+    // let info;
+    // try {
+    //     info = await transporter.sendMail({
+    //         from: "Local Fence Co Email <test@thelocalfenceco.com>",
+    //         to: "lbrandon10121@gmail.com",
+    //         subject: "Testing fence.",
+    //         html: data
+    //     });
+    // } catch (err) {
+    //     console.log(err);
+    //     return false;
+    // }
+
+    // console.log(`Message sent: ${info.messageId}. URL: ${nodeMailer.getTestMessageUrl(info)}`);
 }
 
 export const actions = {
@@ -56,7 +77,7 @@ export const actions = {
             <p>Fence Clicked: ${form.data.fenceClicked}</p>
         `;
 
-        console.log(await sendForm(html));
+        console.log(await sendForm(form.data.name, form.data.contactMethod, form.data.aboutContact));
 
         console.log({form});
 

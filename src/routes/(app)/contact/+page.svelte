@@ -85,6 +85,7 @@
         flex-direction: column;
         align-items: center;
         padding: 10px 0;
+        max-width: 700px;
         gap: 10px;
     }
 

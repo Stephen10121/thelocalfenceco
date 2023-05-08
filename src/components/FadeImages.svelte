@@ -1,8 +1,8 @@
 <script>
-	import whitePrettyPicture from "../assets/fences/whitepretty.jpg";
-	import wooden5Fence from "../assets/fences/wooden5.jpg";
-	import wooden4Fence from "../assets/fences/wooden4.jpg";
-	import wooden3Fence from "../assets/fences/wooden3.jpg";
+	import whitePrettyPicture from "../assets/fences/whitepretty-1200.jpg";
+	import wooden5Fence from "../assets/fences/wooden5-1200.jpg";
+	import wooden4Fence from "../assets/fences/wooden4-1200.jpg";
+	import wooden3Fence from "../assets/fences/wooden3-1200.jpg";
 	import PictureV2 from "./PictureV2.svelte";
 </script>
 
