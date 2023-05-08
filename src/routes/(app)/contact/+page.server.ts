@@ -14,18 +14,16 @@ export async function load(event) {
 }
 
 async function sendForm(data: string) {
-    const config = {
+    let transporter = nodeMailer.createTransport({
         service: "gmail",
-        port: 465,
         auth: {
+            type: "OAUTH2",
             user: import.meta.env.VITE_USER_EMAIL,
-            pass: import.meta.env.VITE_USER_PASS
+            clientId: import.meta.env.VITE_CLIENT_ID,
+            clientSecret: import.meta.env.VITE_CLIENT_SECRET,
+            refreshToken: import.meta.env.VITE_REFRESH_TOKEN
         }
-    }
-
-    console.log(config);
-
-    let transporter = nodeMailer.createTransport(config);
+    });
 
     let info;
     try {
