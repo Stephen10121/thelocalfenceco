@@ -25,7 +25,7 @@
 <style>
     .cover {
         position: relative;
-        background: linear-gradient(#ffffff00, #000000);
+        background: linear-gradient(#ffffff00, #000000e5);
         width: 100%;
         display: flex;
         align-items: center;

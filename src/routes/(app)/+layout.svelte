@@ -51,7 +51,9 @@
 	onMount(scrollToTop);
 
 	$: {
-		if ($page.url.pathname && main) scrollToTop();
+		const urlParams = new URLSearchParams($page.url.search);
+        const article = urlParams.get("article");
+		if ($page.url.pathname && main && !article) scrollToTop();
 	}
 
 	onDestroy(() => {

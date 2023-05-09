@@ -2,6 +2,7 @@
 	import SmallDesc from "../../components/mainPage/SmallDesc.svelte";
 	import Section1 from "../../components/mainPage/Section1.svelte";
 	import FadeImages from "../../components/FadeImages.svelte";
+    import Section2 from "../../components/mainPage/Section2.svelte";
 </script>
 
 <div class="image">
@@ -9,6 +10,7 @@
 </div>
 <main>
 	<Section1 />
+	<!-- <Section2 /> -->
 	<SmallDesc />
 </main>
 

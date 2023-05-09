@@ -12,7 +12,7 @@
 </script>
 
 <section class="cover" style="min-height: calc(100vh - {announcementShowing ? "10" : "7"}0px);min-height: calc(100dvh - {announcementShowing ? "10" : "7"}0px)">
-        <Tile first={true} buttonCallToAction="Get A Quote" title="Framed fences" backgroundImageLink="/fence1.jpg"/>
+        <Tile first={true} linkTo="/about?article=cedar" buttonCallToAction="Learn More" title="Cedar Privacy Fences" backgroundImageLink="/fence1.jpg"/>
         <Tile buttonCallToAction="Get A Quote" title="Lattice fences" backgroundImageLink="/fence3.jpg"/>
         <Tile buttonCallToAction="Get A Quote" title="vinyl fences" backgroundImageLink="/fence4.jpg"/>
         <Tile buttonCallToAction="Get A Quote" title="wooden fences" backgroundImageLink="/fence1.jpg"/>

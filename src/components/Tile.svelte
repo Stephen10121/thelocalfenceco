@@ -6,6 +6,7 @@
     export let buttonCallToAction: string;
     export let backgroundImageLink: string;
     export let first = false;
+    export let linkTo = "#";
 
     let element: HTMLElement;
     let intersecting: boolean;
@@ -18,7 +19,7 @@
             <div transition:fade class="tileImage" style={`background-image: url("${backgroundImageLink}");`}>
                 <div class="tile">
                     <h1>{title}</h1>
-                    <a href="/contact/quote?fenceType=white+vinyl">{buttonCallToAction}</a>
+                    <a href={linkTo}>{buttonCallToAction}</a>
                 </div>
             </div>
         {/if}
