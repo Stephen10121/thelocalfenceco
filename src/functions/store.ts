@@ -16,3 +16,4 @@ export const exampleAnnouncementValues = writable<AnnouncementBanner>({
 
 
 export const scrollSomewhere = writable<null | number>(null);
+export const showNotification = writable<null | string>(null);

@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount } from "svelte";
+    import FadeImages from "../../../components/FadeImages.svelte";
 
     onMount(() => {
         const urlParams = new URLSearchParams(window.location.search);
@@ -11,7 +12,9 @@
         }
     });
 </script>
-
+<div class="image">
+	<FadeImages />
+</div>
 <main>
     <article>
         <h1>Who are we</h1> 
@@ -41,10 +44,19 @@
         justify-content: center;
         flex-direction: column;
         padding: 20px;
+        background-color: #ffffffb6;
         /* display: grid;
         grid-template-rows: 100% auto; */
         /* background-color: red;*/
     }
+    .image {
+		position: fixed;
+		top: 70px;
+		left: 0;
+		z-index: -1;
+		width: 100vw;
+		height: 100vh;
+	}
 
     article {
         height: 100%;
@@ -73,7 +85,7 @@
         font-size: 0.9rem;
         text-indent: 3ch;
         line-height: 30px;
-        color: #3a3a3a;
+        color: #000000;
         max-width: 800px;
         padding: 0 10px;
     }

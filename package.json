@@ -26,7 +26,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"nodemailer": "^6.9.1",
-		"svelte-confetti-explosion": "^0.4.0"
+		"nodemailer": "^6.9.1"
 	}
 }

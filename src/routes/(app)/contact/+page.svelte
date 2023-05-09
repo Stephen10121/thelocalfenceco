@@ -2,7 +2,7 @@
     import { superForm } from "sveltekit-superforms/client";
     import { newSchema } from "../../../functions/quotePageSchema.js";
     import SuperInput from "../../../components/SuperInput.svelte";
-    import { ConfettiExplosion } from 'svelte-confetti-explosion';
+    import { showNotification } from "../../../functions/store.js";
 
     export let data;
     let submitted = false;
@@ -16,6 +16,16 @@
         },
     });
 
+    $: {
+        if (submitted) {
+            showNotification.set("Request Sent!");
+            setTimeout(() => {
+                showNotification.set(null);
+                submitted = false;
+            }, 6000);
+        }
+    }
+
     $form.fenceClicked = data.fenceClicked;
 </script>
 
@@ -25,10 +35,6 @@
         <h2 class="location-h2">We Are in <span>Vancouver, Washington</span></h2>
     </section>
     <section class="form">
-            {#if submitted}
-                <h1>Form Submitted.</h1>
-                <ConfettiExplosion />
-            {/if}
         <form method="POST" use:enhance>
             <SuperInput placeholder="Name" name="name" id="name" errorMsg={$errors.name} bind:value={$form.name}/>
             <SuperInput placeholder="Email" name="contactMethod" id="contactMethod" type="email" errorMsg={$errors.contactMethod} bind:value={$form.contactMethod} />
@@ -87,10 +93,6 @@
         padding: 10px 0;
         max-width: 700px;
         gap: 10px;
-    }
-
-    .form h1 {
-        color: #28583b;
     }
 
     form {

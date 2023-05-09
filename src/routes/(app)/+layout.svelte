@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { exampleAnnouncementValues, scrollSomewhere } from "../../functions/store";
+	import { exampleAnnouncementValues, scrollSomewhere, showNotification } from "../../functions/store";
 	import Announcement from "../../components/Announcement.svelte";
 	import LargeNavLink from "../../components/LargeNavLink.svelte";
 	import SmallNavLink from "../../components/SmallNavLink.svelte";
@@ -7,6 +7,7 @@
 	import Footer from "../../components/Footer.svelte";
 	import { page } from "$app/stores";
 	import { onDestroy, onMount } from "svelte";
+    import Notification from "../../components/Notification.svelte";
 
 	export let data;
 
@@ -38,6 +39,8 @@
 	}
 
 	let main: HTMLElement;
+	let showNotificationVar: null | string = null;
+	const showNotificationUnsubscribe = showNotification.subscribe((value) => showNotificationVar = value);
 
 	let paths: {route: string, name: string}[] = [
 	{route: "/", name: "Home"},
@@ -59,11 +62,15 @@
 	onDestroy(() => {
 	scrollSomewhereUnsubscribe();
 	exampleAnnouncementValuesUnsubscribe();
+	showNotificationUnsubscribe();
 	});
 </script>
 
 {#if showAnnouncement2}
 <Announcement strong={data.announcement.strong} value={data.announcement.val} on:close={() => (exampleAnnouncementValues.update((value) => {return{...value, show: false}}))} backgroundColor={data.announcement.backgroundColor} textColor={data.announcement.textColor} />
+{/if}
+{#if showNotificationVar}
+	<Notification text={showNotificationVar} />
 {/if}
 <header>
 <section class="public">
