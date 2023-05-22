@@ -66,7 +66,7 @@
     .inner {
         width: 0;
         height: 5px;
-        background-color: #28583b;
+        background-color: #5a3b0d;
         animation: progressTime 4s linear forwards;
     }
 

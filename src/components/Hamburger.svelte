@@ -39,7 +39,7 @@
     width: 30px;
     height: 3px;
     display: block;
-    background-color: #28583b;
+    background-color: #5a3b0d;
     margin: 7px auto;
     -webkit-transition: all var(--animation-speed) ease-in-out;
     -o-transition: all var(--animation-speed) ease-in-out;

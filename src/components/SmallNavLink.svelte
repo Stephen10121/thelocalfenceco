@@ -29,6 +29,6 @@
   }
 
   a.selected {
-    background-color: #2f6846;
+    background-color: #5a3b0d;
   }
 </style>
