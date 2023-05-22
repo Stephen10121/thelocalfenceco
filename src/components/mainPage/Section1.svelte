@@ -13,7 +13,8 @@
 </script>
 
 <section class="cover" bind:this={box} style="height: calc(100vh - {announcementShowing ? "10" : "7"}0px);height: calc(100dvh - {announcementShowing ? "10" : "7"}0px);">
-    <h1>Lets Get Started</h1>
+    <h1>Local Fence Co</h1>
+    <h2>Fence installation and repair in Vancouver WA and surrounding areas.</h2>
     <ScrollDownButton on:click={() => {
         scrollSomewhere.set(box.getBoundingClientRect().height);
         setTimeout(() => {
@@ -34,9 +35,28 @@
     }
 
     h1 {
+        font-family: "Protos", sans-serif;
+        font-size: clamp(2rem, -1.5rem + 8vw, 3.5rem);
+        color: #ffffff;
+        margin-bottom: 20px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .dark {
+        color: #58595b;
+    }
+
+    .orange {
+        color: #d69c42;
+    }
+
+    h2 {
         font-family: "Poppins", sans-serif;
-        font-size: clamp(2.5rem, -1.5rem + 8vw, 4rem);
+        font-size: clamp(1rem, -1.5rem + 8vw, 2rem);
         color: #dbdbdb;
         margin-bottom: 50px;
+        width: 90%;
+        text-align: center;
     }
 </style>

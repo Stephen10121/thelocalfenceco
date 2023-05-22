@@ -1,5 +1,5 @@
 import { fail } from "@sveltejs/kit";
-import { superValidate } from "sveltekit-superforms/server";
+import { setError, superValidate } from "sveltekit-superforms/server";
 import { newSchema } from "../../../functions/quotePageSchema";
 import nodeMailer from "nodemailer";
 

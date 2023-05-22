@@ -8,6 +8,7 @@
 	import { page } from "$app/stores";
 	import { onDestroy, onMount } from "svelte";
     import Notification from "../../components/Notification.svelte";
+	import logo from "../../assets/favicon4.png";
 
 	export let data;
 
@@ -75,8 +76,11 @@
 <header>
 <section class="public">
 <section class="fancy">
-<a class="logo" href="/">
-<h1>{calculatePathTitle($page.url.pathname)}</h1>
+<a class="logo" href="/" title="Go Home">
+<!-- <h1>{calculatePathTitle($page.url.pathname)}</h1> -->
+<div class="logo-image-cover">
+	<img src={logo} alt="Local Fence Co logo" class="logo-image"/>
+</div>
 </a>
 <section class="section-small">
 <Hamburger active={showNav} on:click={() => (showNav = !showNav)} />
@@ -143,7 +147,19 @@ box-shadow: none;
 }
 
 .logo {
-text-decoration: none;
+	text-decoration: none;
+	height: 100%;
+	position: relative;
+}
+
+.logo-image-cover {
+	position: absolute;
+	top: -30%;
+	height: 150%;
+}
+
+.logo-image {
+	height: 100%;
 }
 
 .logo h1 {

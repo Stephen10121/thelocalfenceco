@@ -2,12 +2,24 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /* body {
     height: 100vh;
     height: 100dvh;
 } */
+
+@font-face {
+  font-family: "Protos";
+  src: url("fonts/Protos.ttf");
+}
+
+@font-face {
+  font-family: "Copperplate";
+  src: url("fonts/Copperplate.ttf");
+}
 
 html,
 body {

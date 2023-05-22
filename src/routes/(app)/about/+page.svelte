@@ -82,9 +82,10 @@
 
     p {
         font-family: "Poppins", sans-serif;
-        font-size: 0.9rem;
+        font-size: 1rem;
         text-indent: 3ch;
-        line-height: 30px;
+        font-weight: 500;
+        line-height: 35px;
         color: #000000;
         max-width: 800px;
         padding: 0 10px;

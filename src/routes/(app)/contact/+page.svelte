@@ -31,14 +31,14 @@
 
 <main>
     <section class="section-welcome">
-        <h1>Lets get in touch!</h1>
+        <h1>Request a free quote!</h1>
         <h2 class="location-h2">We Are in <span>Vancouver, Washington</span></h2>
     </section>
     <section class="form">
         <form method="POST" use:enhance>
-            <SuperInput placeholder="Name" name="name" id="name" errorMsg={$errors.name} bind:value={$form.name}/>
-            <SuperInput placeholder="Email" name="contactMethod" id="contactMethod" type="email" errorMsg={$errors.contactMethod} bind:value={$form.contactMethod} />
-            <SuperInput placeholder="Description" name="aboutContact" id="aboutContact" errorMsg={$errors.aboutContact} bind:value={$form.aboutContact} />
+            <SuperInput placeholder="Name" name="name" id="name" bind:errorMsg={$errors.name} bind:value={$form.name}/>
+            <SuperInput placeholder="Email" name="contactMethod" id="contactMethod" type="email" bind:errorMsg={$errors.contactMethod} bind:value={$form.contactMethod} />
+            <SuperInput placeholder="Description" name="aboutContact" id="aboutContact" bind:errorMsg={$errors.aboutContact} bind:value={$form.aboutContact} />
             <input type="hidden" bind:this={fenceClickParamInput} name="fenceClicked" bind:value={$form.fenceClicked} />
             <button>Send</button>
         </form>
