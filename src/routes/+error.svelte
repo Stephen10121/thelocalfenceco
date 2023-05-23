@@ -27,7 +27,7 @@
   h1 {
     font-family: "Poppins", sans-serif;
     font-size: 1.25rem;
-    color: #5a3b0d;
+    color: var(--accent-color);
   }
 
   a {

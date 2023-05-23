@@ -99,3 +99,7 @@ body {
       opacity: 1;
     }
   }
+
+  :root {
+    --accent-color: #d69c42;
+  }

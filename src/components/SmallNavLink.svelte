@@ -29,6 +29,6 @@
   }
 
   a.selected {
-    background-color: #5a3b0d;
+    background-color: var(--accent-color);
   }
 </style>

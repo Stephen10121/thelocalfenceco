@@ -35,7 +35,7 @@
     }
 
     h1 {
-        font-family: "Protos", sans-serif;
+        font-family: "Copperplate", sans-serif;
         font-size: clamp(2rem, -1.5rem + 8vw, 3.5rem);
         color: #ffffff;
         margin-bottom: 20px;

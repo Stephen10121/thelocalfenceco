@@ -8,7 +8,7 @@
 	import { page } from "$app/stores";
 	import { onDestroy, onMount } from "svelte";
     import Notification from "../../components/Notification.svelte";
-	import logo from "../../assets/favicon4.png";
+	import logo from "../../assets/logo/web/logo-web-transparent.png";
 
 	export let data;
 
@@ -154,8 +154,9 @@ box-shadow: none;
 
 .logo-image-cover {
 	position: absolute;
-	top: -30%;
-	height: 150%;
+	top: 25%;
+	left: -20px;
+	height: 50%;
 }
 
 .logo-image {
@@ -165,7 +166,7 @@ box-shadow: none;
 .logo h1 {
 font-family: "Poppins", sans-serif;
 font-size: 1.5rem;
-color: #5a3b0d;
+color:var(--accent-color);
 }
 
 .section-small-nav {
@@ -199,7 +200,7 @@ position: relative;
 width: 50px;
 height: 4px;
 position: absolute;
-background-color: #5a3b0d;
+background-color: var(--accent-color);
 bottom: -50%;
 left: 0;
 transform: translate(0, 50%);
@@ -225,6 +226,10 @@ display: block;
 
 .section-small {
 display: none;
+}
+.logo-image-cover {
+	top: 10%;
+	height: 80%;
 }
 }
 </style>

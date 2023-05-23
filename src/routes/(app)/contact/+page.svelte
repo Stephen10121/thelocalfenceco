@@ -68,7 +68,7 @@
     }
 
     .location-h2 span {
-        color: #5a3b0d;
+        color: var(--accent-color);
     }
 
     .section-welcome {
@@ -115,7 +115,7 @@
         background-color: #dfdfdf;
         cursor: pointer;
         font-weight: bold;
-        color: #5a3b0d;
+        color: var(--accent-color);
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 </style>

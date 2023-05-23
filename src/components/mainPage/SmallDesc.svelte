@@ -63,7 +63,7 @@
         font-size: 1rem;
         color: #ffffff;
         /* background-color: #28583b; */
-        background-color: #5a3b0d;
+        background-color: var(--accent-color);
         /* background-color:	#C4A484; */
         /* border: 2px solid #28583b; */
         padding: 15px;
