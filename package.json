@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "vite dev --host",
 		"build": "vite build",
-		"start": "HOST=127.0.0.1 PORT=7401 ORIGIN=https://dev.gruzservices.com node build",
+		"start": "HOST=127.0.0.1 PORT=7401 ORIGIN=https://thelocalfenceco.com node build",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
