@@ -8,7 +8,7 @@
 	import { page } from "$app/stores";
 	import { onDestroy, onMount } from "svelte";
 	import Notification from "../../components/Notification.svelte";
-	import logo from "../../assets/logo/web/logo-web-transparent.png";
+	import logo from "../../assets/logo.png";
 
 	export let data;
 
