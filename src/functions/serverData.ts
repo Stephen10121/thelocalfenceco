@@ -18,3 +18,16 @@ export let announcementBanner: AnnouncementBanner = {
 export function changeAnnouncement(newAnnouncement: AnnouncementBanner) {
     announcementBanner = newAnnouncement;
 }
+
+export type ContactRequest = {
+    name: string;
+    from: string;
+    about: string;
+    when: string;
+}
+
+export let contactRequests: ContactRequest[] = [];
+
+export function addContactRequest(contactRequest: ContactRequest) {
+    contactRequests.push(contactRequest);
+}

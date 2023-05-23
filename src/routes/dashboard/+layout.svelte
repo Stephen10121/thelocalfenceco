@@ -31,7 +31,7 @@
 		</div>
 		<nav>
 			<a href="/dashboard/banner" class="link">Banner</a>
-			<a href="/dashboard/reviews" class="link">Reviews</a>
+			<a href="/dashboard/requests" class="link">Requests</a>
 			<a href="/logout" class="logout">Logout</a>
 		</nav>
 	</header>
@@ -60,6 +60,7 @@
 	main {
 		width: 100%;
 		height: 100%;
+		overflow: hidden;
 	}
 
 	nav {

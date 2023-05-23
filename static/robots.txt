@@ -1,5 +1,6 @@
 User-agent: *
+Allow: /dashboard/$
 Disallow: /admin/
 Disallow: /dashboard/
 
-Sitemap: https://dev.gruzservices.com/sitemap.xml
+Sitemap: https://thelocalfenceco.com/sitemap.xml

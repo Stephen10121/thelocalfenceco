@@ -2,6 +2,7 @@ import { fail } from "@sveltejs/kit";
 import { setError, superValidate } from "sveltekit-superforms/server";
 import { newSchema } from "../../../functions/quotePageSchema";
 import nodeMailer from "nodemailer";
+import { addContactRequest } from "../../../functions/serverData";
 
 export async function load(event) {
     const form = await superValidate(event, newSchema);
@@ -80,6 +81,14 @@ export const actions = {
         console.log(await sendForm(form.data.name, form.data.contactMethod, form.data.aboutContact));
 
         console.log({form});
+        var currentdate = new Date(); 
+        var datetime = currentdate.getDate() + "/"
+                        + (currentdate.getMonth()+1)  + "/" 
+                        + currentdate.getFullYear() + ". "  
+                        + currentdate.getHours() + ":"  
+                        + currentdate.getMinutes() + ":" 
+                        + currentdate.getSeconds();
+        addContactRequest({ name: form.data.name, about: form.data.aboutContact, from: form.data.contactMethod, when: datetime });
 
         event.setHeaders({
             'Access-Control-Allow-Origin': `*`

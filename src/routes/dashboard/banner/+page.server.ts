@@ -34,7 +34,8 @@ export const actions = {
 } satisfies Actions;
 
 
-export async function load() {
+export async function load({ parent }) {
+    await parent();
     return {
         announcement: {
             announcementBanner
