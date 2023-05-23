@@ -6,7 +6,7 @@
 
 <section>
     {#if data.requests.length}
-        {#each data.requests as request}
+        {#each data.requests.reverse() as request}
             <RequestTile email={request.from} name={request.name} about={request.about} when={request.when}/>
         {/each}
     {/if}
