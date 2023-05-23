@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@sveltejs/adapter-auto': ^2.0.0
   '@sveltejs/adapter-node': ^1.2.3
+  '@sveltejs/adapter-static': ^2.0.2
   '@sveltejs/kit': ^1.5.0
   '@types/nodemailer': ^6.4.7
   nodemailer: ^6.9.1
@@ -22,6 +23,7 @@ dependencies:
 devDependencies:
   '@sveltejs/adapter-auto': 2.0.1_@sveltejs+kit@1.16.2
   '@sveltejs/adapter-node': 1.2.4_@sveltejs+kit@1.16.2
+  '@sveltejs/adapter-static': 2.0.2_@sveltejs+kit@1.16.2
   '@sveltejs/kit': 1.16.2_svelte@3.59.1+vite@4.3.5
   '@types/nodemailer': 6.4.7
   svelte: 3.59.1
@@ -744,6 +746,14 @@ packages:
       '@rollup/plugin-node-resolve': 15.0.2_rollup@3.21.5
       '@sveltejs/kit': 1.16.2_svelte@3.59.1+vite@4.3.5
       rollup: 3.21.5
+    dev: true
+
+  /@sveltejs/adapter-static/2.0.2_@sveltejs+kit@1.16.2:
+    resolution: {integrity: sha512-9wYtf6s6ew7DHUHMrt55YpD1FgV7oWql2IGsW5BXquLxqcY9vjrqCFo0TzzDpo+ZPZkW/v77k0eOP6tsAb8HmQ==}
+    peerDependencies:
+      '@sveltejs/kit': ^1.5.0
+    dependencies:
+      '@sveltejs/kit': 1.16.2_svelte@3.59.1+vite@4.3.5
     dev: true
 
   /@sveltejs/kit/1.16.2_svelte@3.59.1+vite@4.3.5:
