@@ -166,7 +166,7 @@ box-shadow: none;
 .logo h1 {
 font-family: "Poppins", sans-serif;
 font-size: 1.5rem;
-color:var(--accent-color);
+color:#d69c42;
 }
 
 .section-small-nav {
@@ -200,7 +200,7 @@ position: relative;
 width: 50px;
 height: 4px;
 position: absolute;
-background-color: var(--accent-color);
+background-color: #d69c42;
 bottom: -50%;
 left: 0;
 transform: translate(0, 50%);
