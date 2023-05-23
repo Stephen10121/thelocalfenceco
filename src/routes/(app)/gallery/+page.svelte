@@ -3,6 +3,10 @@
   import Image from "svelte-image";
 </script>
 
+<svelte:head>
+    <link rel="canonical" href="https://www.thelocalfenceco.com/gallery"/>
+</svelte:head>
+
 <main>
   <!-- <h1 class="title">Gallery</h1> -->
   <div class="row">

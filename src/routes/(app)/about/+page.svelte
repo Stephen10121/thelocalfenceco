@@ -12,6 +12,11 @@
         }
     });
 </script>
+
+<svelte:head>
+    <link rel="canonical" href="https://www.thelocalfenceco.com/about"/>
+</svelte:head>
+
 <div class="image">
 	<FadeImages />
 </div>

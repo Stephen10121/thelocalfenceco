@@ -29,6 +29,10 @@
     $form.fenceClicked = data.fenceClicked;
 </script>
 
+<svelte:head>
+    <link rel="canonical" href="https://www.thelocalfenceco.com/contact"/>
+</svelte:head>
+
 <main>
     <section class="section-welcome">
         <h1>Request a free quote!</h1>
