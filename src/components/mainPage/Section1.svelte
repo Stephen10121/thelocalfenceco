@@ -35,20 +35,13 @@
     }
 
     h1 {
-        font-family: "Copperplate", sans-serif;
-        font-size: clamp(2rem, -1.5rem + 8vw, 3.5rem);
+        font-family: "Copperplate";
+        font-size: clamp(2.5rem, -1.5rem + 8vw, 3.5rem);
+        font-weight: 500;
         color: #ffffff;
         margin-bottom: 20px;
         width: 90%;
         text-align: center;
-    }
-
-    .dark {
-        color: #58595b;
-    }
-
-    .orange {
-        color: #d69c42;
     }
 
     h2 {
