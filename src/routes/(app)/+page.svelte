@@ -4,6 +4,10 @@
 	import FadeImages from "../../components/FadeImages.svelte";
 </script>
 
+<svelte:head>
+    <link rel="canonical" href="https://www.thelocalfenceco.com"/>
+</svelte:head>
+
 <div class="image">
 	<FadeImages />
 </div>
