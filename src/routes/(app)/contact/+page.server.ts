@@ -1,8 +1,8 @@
 import { fail } from "@sveltejs/kit";
 import { setError, superValidate } from "sveltekit-superforms/server";
 import { newSchema } from "../../../functions/quotePageSchema";
-import nodeMailer from "nodemailer";
 import { addContactRequest } from "../../../functions/serverData";
+import { Resend } from 'resend';
 
 export async function load(event) {
     const form = await superValidate(event, newSchema);
@@ -14,53 +14,20 @@ export async function load(event) {
     }
 }
 
-async function sendForm(name: string, from: string, about: string) {
-    try {
-        const data = await fetch("https://mail.gruzservices.com/sendMail", {
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            method: "POST",
-            body: JSON.stringify({
-                "name": name,
-                "from": from,
-                "about": about,
-                "password": import.meta.env.VITE_PASSWORD
-            })
-        });
-        const dataJson = await data.json();
-        console.log(dataJson);
-        return true;
-    } catch (err) {
-        console.log(err);
-        return false;
+async function sendForm(html: string) {
+    const resend = new Resend(import.meta.env.VITE_RESEND_KEY);
+    const { data, error } = await resend.emails.send({
+        from: "contact@mail.thelocalfenceco.com",
+        to: 'thelocalfenceco@gmail.com',
+        subject: 'Website Contact Form',
+        html
+    });
+
+    if (error) {
+        return console.error({ error });
     }
-    // let transporter = nodeMailer.createTransport({
-    //     service: "gmail",
-    //     auth: {
-    //         type: "OAUTH2",
-    //         user: import.meta.env.VITE_USER_EMAIL,
-    //         clientId: import.meta.env.VITE_CLIENT_ID,
-    //         clientSecret: import.meta.env.VITE_CLIENT_SECRET,
-    //         refreshToken: import.meta.env.VITE_REFRESH_TOKEN
-    //     }
-    // });
 
-    // let info;
-    // try {
-    //     info = await transporter.sendMail({
-    //         from: "Local Fence Co Email <test@thelocalfenceco.com>",
-    //         to: "lbrandon10121@gmail.com",
-    //         subject: "Testing fence.",
-    //         html: data
-    //     });
-    // } catch (err) {
-    //     console.log(err);
-    //     return false;
-    // }
-
-    // console.log(`Message sent: ${info.messageId}. URL: ${nodeMailer.getTestMessageUrl(info)}`);
+    console.log({ data });
 }
 
 export const actions = {
@@ -72,13 +39,13 @@ export const actions = {
         }
 
         const html = `
-            <h1>${form.data.name}</h1>
-            <h2>${form.data.contactMethod}</h2>
-            <p>${form.data.aboutContact}</p>
+            <h1>Name: ${form.data.name}</h1>
+            <h2>Contact Method: ${form.data.contactMethod}</h2>
+            <p>About: ${form.data.aboutContact}</p>
             <p>Fence Clicked: ${form.data.fenceClicked}</p>
         `;
 
-        console.log(await sendForm(form.data.name, form.data.contactMethod, form.data.aboutContact));
+        console.log(await sendForm(html));
 
         console.log({form});
         var currentdate = new Date(); 

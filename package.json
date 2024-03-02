@@ -15,7 +15,6 @@
 		"@sveltejs/adapter-node": "^1.2.3",
 		"@sveltejs/adapter-static": "^2.0.2",
 		"@sveltejs/kit": "^1.5.0",
-		"@types/nodemailer": "^6.4.7",
 		"svelte": "^3.54.0",
 		"svelte-check": "^3.0.1",
 		"svelte-image": "^0.2.9",
@@ -28,6 +27,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"nodemailer": "^6.9.1"
+		"resend": "^3.2.0"
 	}
 }
